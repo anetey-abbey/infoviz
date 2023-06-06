@@ -1,4 +1,4 @@
-# Jupyter Book Tutorial
+# Jupyter Book Tutorial Group 70
 
 (Last updated: June 4, 2023)
 
