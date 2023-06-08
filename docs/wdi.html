@@ -406,99 +406,17 @@ document.write(`
 <p>Import the WDI dataset</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import specified years from dataset</span>
-<span class="n">cols_to_use</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Code&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">2022</span><span class="p">)]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;WDIData.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">cols_to_use</span><span class="p">)</span>
-<span class="n">df</span> 
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># import specified years from dataset</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">cols_to_use</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Code&#39;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">2022</span><span class="p">)]</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;WDIData.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="n">cols_to_use</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">df</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;WDIData.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> 
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 66&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-<span class="nn">File ~/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/io/parsers/readers.py:912,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
-<span class="g g-Whitespace">    </span><span class="mi">899</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">900</span>     <span class="n">dialect</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">901</span>     <span class="n">delimiter</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">908</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">909</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">910</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">912</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+<span class="n">selected_indicators</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GDP growth (annual %)&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;Foreign direct investment, net inflows (BoP, current US$)&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;GNI per capita, PPP (current international $)&#39;</span><span class="p">]</span>
 
-<span class="nn">File ~/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/io/parsers/readers.py:577,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">574</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">576</span> <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">577</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">579</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">580</span>     <span class="k">return</span> <span class="n">parser</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">selected_indicators</span><span class="p">)]</span>
 
-<span class="nn">File ~/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/io/parsers/readers.py:1407,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1404</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1406</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">1407</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-
-<span class="nn">File ~/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/io/parsers/readers.py:1661,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1659</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1660</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1661</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1662</span>     <span class="n">f</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1663</span>     <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1664</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1665</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1666</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1667</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1668</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1669</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1670</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1671</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1672</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
-
-<span class="nn">File ~/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/pandas/io/common.py:859,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">854</span> <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">855</span>     <span class="c1"># Check whether the filename is to be opened in binary mode.</span>
-<span class="g g-Whitespace">    </span><span class="mi">856</span>     <span class="c1"># Binary mode does not support &#39;encoding&#39; and &#39;newline&#39;.</span>
-<span class="g g-Whitespace">    </span><span class="mi">857</span>     <span class="k">if</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span> <span class="ow">and</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">858</span>         <span class="c1"># Encoding</span>
-<span class="ne">--&gt; </span><span class="mi">859</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">860</span>             <span class="n">handle</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">861</span>             <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">862</span>             <span class="n">encoding</span><span class="o">=</span><span class="n">ioargs</span><span class="o">.</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">863</span>             <span class="n">errors</span><span class="o">=</span><span class="n">errors</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">864</span>             <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">865</span>         <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">866</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">867</span>         <span class="c1"># Binary mode</span>
-<span class="g g-Whitespace">    </span><span class="mi">868</span>         <span class="n">handle</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">handle</span><span class="p">,</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">mode</span><span class="p">)</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;WDIData.csv&#39;
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # focus on these countries</span>
-<span class="c1"># df = df[df[&#39;Country Code&#39;].isin([&#39;NLD&#39;, &#39;USA&#39;, &#39;JPN&#39;])]</span>
-<span class="c1"># df</span>
-
-<span class="c1"># Melt columns</span>
-<span class="n">melt_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Code&#39;</span><span class="p">]</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="n">melt_columns</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">)</span>
-
-<span class="c1"># Remove missing values</span>
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
-
-<span class="c1"># Convert &#39;Year&#39; column to numeric</span>
-<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">])</span>
-
-<span class="n">df</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -525,55 +443,171 @@ document.write(`
       <th>Country Code</th>
       <th>Indicator Name</th>
       <th>Indicator Code</th>
+      <th>1960</th>
+      <th>1961</th>
+      <th>1962</th>
+      <th>1963</th>
+      <th>1964</th>
+      <th>1965</th>
+      <th>...</th>
+      <th>2012</th>
+      <th>2013</th>
+      <th>2014</th>
+      <th>2015</th>
+      <th>2016</th>
+      <th>2017</th>
+      <th>2018</th>
+      <th>2019</th>
+      <th>2020</th>
+      <th>2021</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>455</th>
+      <td>Africa Eastern and Southern</td>
+      <td>AFE</td>
+      <td>Foreign direct investment, net inflows (BoP, c...</td>
+      <td>BX.KLT.DINV.CD.WD</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>2.463634e+10</td>
+      <td>2.153424e+10</td>
+      <td>2.768142e+10</td>
+      <td>2.877423e+10</td>
+      <td>1.663278e+10</td>
+      <td>1.003544e+10</td>
+      <td>1.359147e+10</td>
+      <td>1.382234e+10</td>
+      <td>1.257987e+10</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>470</th>
+      <td>Africa Eastern and Southern</td>
+      <td>AFE</td>
+      <td>GDP growth (annual %)</td>
+      <td>NY.GDP.MKTP.KD.ZG</td>
+      <td>NaN</td>
+      <td>0.239594</td>
+      <td>7.980768</td>
+      <td>5.164334</td>
+      <td>4.579952</td>
+      <td>5.327717</td>
+      <td>...</td>
+      <td>9.230672e-01</td>
+      <td>4.200209e+00</td>
+      <td>3.984387e+00</td>
+      <td>2.952845e+00</td>
+      <td>2.217017e+00</td>
+      <td>2.557135e+00</td>
+      <td>2.485244e+00</td>
+      <td>2.025941e+00</td>
+      <td>-2.886856e+00</td>
+      <td>4.303667</td>
+    </tr>
+  </tbody>
+</table>
+<p>2 rows × 66 columns</p>
+</div></div></div>
+</div>
+<p>For effective data analysis we need the data in the wide format but with the variable names in the columns</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_long</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Code&#39;</span><span class="p">],</span> 
+                  <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">)</span>
+
+<span class="n">df_wide</span> <span class="o">=</span> <span class="n">df_long</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Code&#39;</span><span class="p">],</span> 
+                              <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">df_wide</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Indicator Name</th>
       <th>Year</th>
-      <th>Value</th>
+      <th>Country Name</th>
+      <th>Country Code</th>
+      <th>Foreign direct investment, net inflows (BoP, current US$)</th>
+      <th>GDP growth (annual %)</th>
+      <th>GNI per capita, PPP (current international $)</th>
+      <th>Individuals using the Internet (% of population)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>Africa Eastern and Southern</td>
-      <td>AFE</td>
-      <td>Access to clean fuels and technologies for coo...</td>
-      <td>EG.CFT.ACCS.ZS</td>
-      <td>2010</td>
-      <td>1.562598e+01</td>
+      <td>1960</td>
+      <td>Botswana</td>
+      <td>BWA</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Africa Eastern and Southern</td>
-      <td>AFE</td>
-      <td>Access to clean fuels and technologies for coo...</td>
-      <td>EG.CFT.ACCS.RU.ZS</td>
-      <td>2010</td>
-      <td>5.808091e+00</td>
+      <td>1960</td>
+      <td>Burundi</td>
+      <td>BDI</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Africa Eastern and Southern</td>
-      <td>AFE</td>
-      <td>Access to clean fuels and technologies for coo...</td>
-      <td>EG.CFT.ACCS.UR.ZS</td>
-      <td>2010</td>
-      <td>3.701570e+01</td>
+      <td>1960</td>
+      <td>Grenada</td>
+      <td>GRD</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Africa Eastern and Southern</td>
-      <td>AFE</td>
-      <td>Access to electricity (% of population)</td>
-      <td>EG.ELC.ACCS.ZS</td>
-      <td>2010</td>
-      <td>2.755714e+01</td>
+      <td>1960</td>
+      <td>Maldives</td>
+      <td>MDV</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Africa Eastern and Southern</td>
-      <td>AFE</td>
-      <td>Access to electricity, rural (% of rural popul...</td>
-      <td>EG.ELC.ACCS.RU.ZS</td>
-      <td>2010</td>
-      <td>1.457717e+01</td>
+      <td>1960</td>
+      <td>Syrian Arab Republic</td>
+      <td>SYR</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>0.0</td>
     </tr>
     <tr>
       <th>...</th>
@@ -583,55 +617,61 @@ document.write(`
       <td>...</td>
       <td>...</td>
       <td>...</td>
+      <td>...</td>
     </tr>
     <tr>
-      <th>4602828</th>
-      <td>Zimbabwe</td>
-      <td>ZWE</td>
-      <td>Unemployment, youth total (% of total labor fo...</td>
-      <td>SL.UEM.1524.ZS</td>
+      <th>13601</th>
       <td>2021</td>
-      <td>7.325000e+00</td>
+      <td>West Bank and Gaza</td>
+      <td>PSE</td>
+      <td>NaN</td>
+      <td>7.050451</td>
+      <td>7370.0</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>4602834</th>
-      <td>Zimbabwe</td>
-      <td>ZWE</td>
-      <td>Urban population</td>
-      <td>SP.URB.TOTL</td>
+      <th>13602</th>
       <td>2021</td>
-      <td>4.875224e+06</td>
+      <td>Yemen, Rep.</td>
+      <td>YEM</td>
+      <td>NaN</td>
+      <td>-2.061513</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>4602835</th>
-      <td>Zimbabwe</td>
-      <td>ZWE</td>
-      <td>Urban population (% of total population)</td>
-      <td>SP.URB.TOTL.IN.ZS</td>
+      <th>13603</th>
       <td>2021</td>
-      <td>3.230300e+01</td>
+      <td>Serbia</td>
+      <td>SRB</td>
+      <td>NaN</td>
+      <td>7.389271</td>
+      <td>20610.0</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>4602836</th>
-      <td>Zimbabwe</td>
-      <td>ZWE</td>
-      <td>Urban population growth (annual %)</td>
-      <td>SP.URB.GROW</td>
+      <th>13604</th>
       <td>2021</td>
-      <td>1.719628e+00</td>
+      <td>Montenegro</td>
+      <td>MNE</td>
+      <td>NaN</td>
+      <td>12.434359</td>
+      <td>23280.0</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>4602851</th>
-      <td>Zimbabwe</td>
-      <td>ZWE</td>
-      <td>Women Business and the Law Index Score (scale ...</td>
-      <td>SG.LAW.INDX</td>
+      <th>13605</th>
       <td>2021</td>
-      <td>8.687500e+01</td>
+      <td>Kosovo</td>
+      <td>XKX</td>
+      <td>NaN</td>
+      <td>9.127578</td>
+      <td>13010.0</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>2325435 rows × 6 columns</p>
+<p>13606 rows × 7 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -640,48 +680,135 @@ document.write(`
 <p>Testing plot</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_birth_rate</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Indicator Name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Birth rate, crude (per 1,000 people)&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_groups</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Arab World&quot;</span><span class="p">,</span> 
+                  <span class="s2">&quot;European Union&quot;</span><span class="p">,</span> 
+                  <span class="s2">&quot;East Asia &amp; Pacific&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;Africa Eastern and Southern&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;North America&quot;</span><span class="p">,</span>
+                  <span class="s2">&quot;Latin America &amp; Caribbean&quot;</span><span class="p">]</span>
 
-<span class="n">df_birth_rate</span> <span class="o">=</span> <span class="n">df_birth_rate</span><span class="p">[</span><span class="n">df_birth_rate</span><span class="p">[</span><span class="s1">&#39;Country Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;NLD&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;JPN&#39;</span><span class="p">])]</span>
+<span class="n">df_groups</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">country_groups</span><span class="p">)]</span>
 
-<span class="c1"># Line plot for birth rates</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">df_birth_rate</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
-    <span class="n">country_data</span> <span class="o">=</span> <span class="n">df_birth_rate</span><span class="p">[</span><span class="n">df_birth_rate</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">]</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">country_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">country_data</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">country</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Birth rate, crude (per 1,000 people)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Birth rate&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">country_groups</span><span class="p">:</span>
+    <span class="n">group_data</span> <span class="o">=</span> <span class="n">df_groups</span><span class="p">[</span><span class="n">df_groups</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">group</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">group_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">group_data</span><span class="p">[</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">group</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Trend of Internet Usage Over Time&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">locs</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">()</span> 
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">locs</span><span class="p">[::</span><span class="mi">5</span><span class="p">],</span> <span class="n">df_groups</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()[::</span><span class="mi">5</span><span class="p">])</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">unique_values</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">unique_values</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3619d70ee86edc5a2d248306bbab5e37eae7320a95eebd7931a73dd1974aa06f.png" src="../_images/3619d70ee86edc5a2d248306bbab5e37eae7320a95eebd7931a73dd1974aa06f.png" />
+<img alt="../_images/5b771bf2fb8d24a7dbedd848fc1bce2cf886bdd0097372939d0d17be98766bb0.png" src="../_images/5b771bf2fb8d24a7dbedd848fc1bce2cf886bdd0097372939d0d17be98766bb0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Botswana&#39;, &#39;Burundi&#39;, &#39;Grenada&#39;, &#39;Maldives&#39;,
+       &#39;Syrian Arab Republic&#39;, &#39;Thailand&#39;, &#39;Togo&#39;,
+       &#39;Africa Eastern and Southern&#39;, &#39;Africa Western and Central&#39;,
+       &#39;Algeria&#39;, &#39;Argentina&#39;, &#39;Australia&#39;, &#39;Austria&#39;, &#39;Bahamas, The&#39;,
+       &#39;Bangladesh&#39;, &#39;Belgium&#39;, &#39;Belize&#39;, &#39;Benin&#39;, &#39;Bermuda&#39;, &#39;Bolivia&#39;,
+       &#39;Brazil&#39;, &#39;Burkina Faso&#39;, &#39;Cameroon&#39;, &#39;Canada&#39;,
+       &#39;Central African Republic&#39;, &#39;Chad&#39;, &#39;Chile&#39;, &#39;China&#39;, &#39;Colombia&#39;,
+       &#39;Congo, Dem. Rep.&#39;, &#39;Congo, Rep.&#39;, &#39;Costa Rica&#39;, &quot;Cote d&#39;Ivoire&quot;,
+       &#39;Denmark&#39;, &#39;Dominican Republic&#39;, &#39;Early-demographic dividend&#39;,
+       &#39;East Asia &amp; Pacific&#39;,
+       &#39;East Asia &amp; Pacific (IDA &amp; IBRD countries)&#39;,
+       &#39;East Asia &amp; Pacific (excluding high income)&#39;, &#39;Ecuador&#39;,
+       &#39;Egypt, Arab Rep.&#39;, &#39;Fiji&#39;, &#39;Finland&#39;, &#39;France&#39;, &#39;Gabon&#39;, &#39;Ghana&#39;,
+       &#39;Greece&#39;, &#39;Guatemala&#39;, &#39;Guyana&#39;, &#39;Haiti&#39;,
+       &#39;Heavily indebted poor countries (HIPC)&#39;, &#39;High income&#39;,
+       &#39;Honduras&#39;, &#39;IBRD only&#39;, &#39;IDA &amp; IBRD total&#39;, &#39;IDA blend&#39;,
+       &#39;IDA total&#39;, &#39;Iceland&#39;, &#39;India&#39;, &#39;Indonesia&#39;, &#39;Iran, Islamic Rep.&#39;,
+       &#39;Israel&#39;, &#39;Italy&#39;, &#39;Japan&#39;, &#39;Kenya&#39;, &#39;Korea, Rep.&#39;,
+       &#39;Late-demographic dividend&#39;, &#39;Latin America &amp; Caribbean&#39;,
+       &#39;Latin America &amp; Caribbean (excluding high income)&#39;,
+       &#39;Latin America &amp; the Caribbean (IDA &amp; IBRD countries)&#39;, &#39;Lesotho&#39;,
+       &#39;Low &amp; middle income&#39;, &#39;Lower middle income&#39;, &#39;Luxembourg&#39;,
+       &#39;Madagascar&#39;, &#39;Malawi&#39;, &#39;Malaysia&#39;, &#39;Mexico&#39;, &#39;Middle income&#39;,
+       &#39;Nepal&#39;, &#39;Netherlands&#39;, &#39;Nicaragua&#39;, &#39;Niger&#39;, &#39;Nigeria&#39;,
+       &#39;North America&#39;, &#39;Norway&#39;, &#39;OECD members&#39;, &#39;Pakistan&#39;, &#39;Panama&#39;,
+       &#39;Papua New Guinea&#39;, &#39;Paraguay&#39;, &#39;Peru&#39;, &#39;Philippines&#39;, &#39;Portugal&#39;,
+       &#39;Post-demographic dividend&#39;, &#39;Pre-demographic dividend&#39;,
+       &#39;Puerto Rico&#39;, &#39;Rwanda&#39;, &#39;Senegal&#39;, &#39;Seychelles&#39;, &#39;Sierra Leone&#39;,
+       &#39;Singapore&#39;, &#39;Somalia&#39;, &#39;South Africa&#39;, &#39;South Asia&#39;,
+       &#39;South Asia (IDA &amp; IBRD)&#39;, &#39;Spain&#39;,
+       &#39;St. Vincent and the Grenadines&#39;, &#39;Sub-Saharan Africa&#39;,
+       &#39;Sub-Saharan Africa (IDA &amp; IBRD countries)&#39;,
+       &#39;Sub-Saharan Africa (excluding high income)&#39;, &#39;Sudan&#39;, &#39;Suriname&#39;,
+       &#39;Sweden&#39;, &#39;Trinidad and Tobago&#39;, &#39;Turkiye&#39;, &#39;United Kingdom&#39;,
+       &#39;United States&#39;, &#39;Upper middle income&#39;, &#39;Uruguay&#39;, &#39;Venezuela, RB&#39;,
+       &#39;World&#39;, &#39;Zambia&#39;, &#39;Zimbabwe&#39;, &#39;Hong Kong SAR, China&#39;, &#39;IDA only&#39;,
+       &#39;Mauritania&#39;, &#39;Myanmar&#39;, &#39;Sri Lanka&#39;, &#39;El Salvador&#39;,
+       &#39;French Polynesia&#39;, &#39;Georgia&#39;,
+       &#39;Middle East &amp; North Africa (IDA &amp; IBRD countries)&#39;,
+       &#39;Middle East &amp; North Africa (excluding high income)&#39;,
+       &#39;New Caledonia&#39;, &#39;Oman&#39;, &#39;Tunisia&#39;, &#39;Caribbean small states&#39;,
+       &#39;Gambia, The&#39;, &#39;Jamaica&#39;, &#39;Morocco&#39;, &#39;Mali&#39;,
+       &#39;Fragile and conflict affected situations&#39;, &#39;Iraq&#39;, &#39;Saudi Arabia&#39;,
+       &#39;Afghanistan&#39;, &#39;Angola&#39;, &#39;Arab World&#39;, &#39;Barbados&#39;,
+       &#39;Brunei Darussalam&#39;, &#39;Cambodia&#39;, &#39;Cyprus&#39;, &#39;Euro area&#39;,
+       &#39;Europe &amp; Central Asia&#39;,
+       &#39;Europe &amp; Central Asia (IDA &amp; IBRD countries)&#39;,
+       &#39;Europe &amp; Central Asia (excluding high income)&#39;, &#39;European Union&#39;,
+       &#39;Ireland&#39;, &#39;Kuwait&#39;, &#39;Lao PDR&#39;,
+       &#39;Least developed countries: UN classification&#39;, &#39;Liberia&#39;, &#39;Libya&#39;,
+       &#39;Low income&#39;, &#39;Malta&#39;, &#39;Mauritius&#39;, &#39;Middle East &amp; North Africa&#39;,
+       &#39;Mozambique&#39;, &#39;New Zealand&#39;, &#39;Other small states&#39;,
+       &#39;Pacific island small states&#39;, &#39;Qatar&#39;, &#39;Samoa&#39;, &#39;Small states&#39;,
+       &#39;Tanzania&#39;, &#39;Uganda&#39;, &#39;United Arab Emirates&#39;, &#39;Vietnam&#39;, &#39;Andorra&#39;,
+       &#39;Central Europe and the Baltics&#39;, &#39;Cuba&#39;, &#39;Eswatini&#39;, &#39;Germany&#39;,
+       &#39;Greenland&#39;, &#39;Guinea-Bissau&#39;, &#39;Kiribati&#39;, &#39;Lebanon&#39;,
+       &#39;Liechtenstein&#39;, &#39;Macao SAR, China&#39;, &#39;Monaco&#39;, &#39;Romania&#39;,
+       &#39;Solomon Islands&#39;, &#39;Tonga&#39;, &#39;Vanuatu&#39;, &#39;Jordan&#39;, &#39;Bahrain&#39;,
+       &#39;Djibouti&#39;, &#39;Guinea&#39;, &#39;Bhutan&#39;, &#39;British Virgin Islands&#39;,
+       &#39;Cayman Islands&#39;, &#39;Sao Tome and Principe&#39;, &#39;Dominica&#39;, &#39;Poland&#39;,
+       &#39;St. Lucia&#39;, &#39;Antigua and Barbuda&#39;, &#39;Cabo Verde&#39;, &#39;Ethiopia&#39;,
+       &#39;Comoros&#39;, &#39;Equatorial Guinea&#39;, &#39;St. Kitts and Nevis&#39;, &#39;Albania&#39;,
+       &#39;Bulgaria&#39;, &#39;Mongolia&#39;, &#39;Namibia&#39;, &#39;Switzerland&#39;, &#39;Hungary&#39;,
+       &#39;Marshall Islands&#39;, &#39;Isle of Man&#39;, &#39;Aruba&#39;,
+       &quot;Korea, Dem. People&#39;s Rep.&quot;, &#39;Tajikistan&#39;, &#39;Kyrgyz Republic&#39;,
+       &#39;Micronesia, Fed. Sts.&#39;, &#39;Turkmenistan&#39;, &#39;Ukraine&#39;, &#39;Uzbekistan&#39;,
+       &#39;Palau&#39;, &#39;American Samoa&#39;, &#39;Armenia&#39;, &#39;Azerbaijan&#39;, &#39;Belarus&#39;,
+       &#39;Bosnia and Herzegovina&#39;, &#39;Croatia&#39;, &#39;Czech Republic&#39;, &#39;Eritrea&#39;,
+       &#39;Estonia&#39;, &#39;Faroe Islands&#39;, &#39;Gibraltar&#39;, &#39;Guam&#39;, &#39;Kazakhstan&#39;,
+       &#39;Latvia&#39;, &#39;Lithuania&#39;, &#39;Moldova&#39;, &#39;Nauru&#39;, &#39;North Macedonia&#39;,
+       &#39;Northern Mariana Islands&#39;, &#39;Russian Federation&#39;, &#39;San Marino&#39;,
+       &#39;Slovak Republic&#39;, &#39;Slovenia&#39;, &#39;Timor-Leste&#39;,
+       &#39;Turks and Caicos Islands&#39;, &#39;Tuvalu&#39;, &#39;Virgin Islands (U.S.)&#39;,
+       &#39;West Bank and Gaza&#39;, &#39;Yemen, Rep.&#39;, &#39;Serbia&#39;, &#39;Montenegro&#39;,
+       &#39;Channel Islands&#39;, &#39;Curacao&#39;, &#39;Kosovo&#39;,
+       &#39;Sint Maarten (Dutch part)&#39;, &#39;South Sudan&#39;], dtype=object)
+</pre></div>
 </div>
 </div>
+</div>
+<p>There is a strong relation between GNI and internet usage</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_gdp</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Indicator Name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;GDP (constant 2015 US$)&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_2020</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2020&#39;</span><span class="p">]</span>
 
-<span class="n">df_gdp</span> <span class="o">=</span> <span class="n">df_gdp</span><span class="p">[</span><span class="n">df_gdp</span><span class="p">[</span><span class="s1">&#39;Country Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;NLD&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;JPN&#39;</span><span class="p">])]</span>
-
-<span class="c1"># Line plot for GDP</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
-<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">df_gdp</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
-    <span class="n">country_data</span> <span class="o">=</span> <span class="n">df_gdp</span><span class="p">[</span><span class="n">df_gdp</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">]</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">country_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">country_data</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">country</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;GDP (constant 2015 US$)&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;GDP&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_2020</span><span class="p">[</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">],</span> 
+            <span class="n">df_2020</span><span class="p">[</span><span class="s1">&#39;GNI per capita, PPP (current international $)&#39;</span><span class="p">],</span>
+            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
+            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Internet Usage vs GNI per Capita for 2021&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;GNI per capita, PPP (current international $)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Countries&#39;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/08d690c52f20ef9a72b7fdf105f1d0f69f474b5306f19f0ef2a47b0707d378c9.png" src="../_images/08d690c52f20ef9a72b7fdf105f1d0f69f474b5306f19f0ef2a47b0707d378c9.png" />
+<img alt="../_images/d8a7b276f9dbcef2e4b00794bedae926993ada49f3962586181a9def561e10c5.png" src="../_images/d8a7b276f9dbcef2e4b00794bedae926993ada49f3962586181a9def561e10c5.png" />
 </div>
 </div>
 </section>
