@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Vizulation WDI dataset &#8212; Jupyter Book Template</title>
+    <title>Test Visualization &#8212; Jupyter Book Template</title>
   
   
   
@@ -62,10 +62,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/notebook';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'docs/notebook_old';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Jupyter Book Tutorial Group 70" href="home.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -150,8 +149,8 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Vizulation WDI dataset</a></li>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="notebook.html">Vizulation WDI dataset</a></li>
 </ul>
 
     </div>
@@ -206,7 +205,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://colab.research.google.com/github/yenchiah/jupyter-book-template/blob/main/docs/docs/notebook.ipynb" target="_blank"
+      <li><a href="https://colab.research.google.com/github/yenchiah/jupyter-book-template/blob/main/docs/docs/notebook_old.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onColab"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -254,7 +253,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fdocs/notebook.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/yenchiah/jupyter-book-template/issues/new?title=Issue%20on%20page%20%2Fdocs/notebook_old.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -284,7 +283,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/docs/notebook.ipynb" target="_blank"
+      <li><a href="../_sources/docs/notebook_old.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -366,7 +365,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Vizulation WDI dataset</h1>
+    <h1>Test Visualization</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -389,8 +388,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="vizulation-wdi-dataset">
-<h1>Vizulation WDI dataset<a class="headerlink" href="#vizulation-wdi-dataset" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="test-visualization">
+<h1>Test Visualization<a class="headerlink" href="#test-visualization" title="Permalink to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import packages</span>
@@ -404,20 +403,20 @@ document.write(`
 </div>
 <section id="load-data">
 <h2>Load data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
-<p>Import the WDI dataset</p>
+<p>You can put your data at the same directory as the notebook file and then use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> to load the data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;WDIData.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> 
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 66&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># # create small_dataset_test</span>
+<span class="c1"># cols_to_use = [&#39;Country Name&#39;, &#39;Country Code&#39;, &#39;Indicator Name&#39;, &#39;Indicator Code&#39;] + [str(i) for i in range(2010, 2022)]</span>
+<span class="c1"># df = pd.read_csv(&#39;WDIData.csv&#39;, sep=&#39;,&#39;, usecols=cols_to_use)</span>
+<span class="c1"># df = df[df[&#39;Indicator Name&#39;].isin([&#39;GDP (constant 2015 US$)&#39;,</span>
+<span class="c1">#                                    &#39;Birth rate, crude (per 1,000 people)&#39;])]</span>
+<span class="c1"># df.to_csv(&#39;small_dataset_test.csv&#39;, index=False)</span>
+<span class="c1"># df </span>
 
-<span class="n">selected_indicators</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;GDP growth (annual %)&#39;</span><span class="p">,</span>
-                       <span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">,</span>
-                       <span class="s1">&#39;Foreign direct investment, net inflows (BoP, current US$)&#39;</span><span class="p">,</span>
-                       <span class="s1">&#39;GNI per capita, PPP (current international $)&#39;</span><span class="p">]</span>
-
-<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">selected_indicators</span><span class="p">)]</span>
-
-<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1"># import dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;small_dataset_test.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -444,13 +443,8 @@ document.write(`
       <th>Country Code</th>
       <th>Indicator Name</th>
       <th>Indicator Code</th>
-      <th>1960</th>
-      <th>1961</th>
-      <th>1962</th>
-      <th>1963</th>
-      <th>1964</th>
-      <th>1965</th>
-      <th>...</th>
+      <th>2010</th>
+      <th>2011</th>
       <th>2012</th>
       <th>2013</th>
       <th>2014</th>
@@ -465,68 +459,120 @@ document.write(`
   </thead>
   <tbody>
     <tr>
-      <th>455</th>
+      <th>0</th>
       <td>Africa Eastern and Southern</td>
       <td>AFE</td>
-      <td>Foreign direct investment, net inflows (BoP, c...</td>
-      <td>BX.KLT.DINV.CD.WD</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>...</td>
-      <td>2.463634e+10</td>
-      <td>2.153424e+10</td>
-      <td>2.768142e+10</td>
-      <td>2.877423e+10</td>
-      <td>1.663278e+10</td>
-      <td>1.003544e+10</td>
-      <td>1.359147e+10</td>
-      <td>1.382234e+10</td>
-      <td>1.257987e+10</td>
+      <td>Birth rate, crude (per 1,000 people)</td>
+      <td>SP.DYN.CBRT.IN</td>
+      <td>3.767701e+01</td>
+      <td>3.723756e+01</td>
+      <td>3.677038e+01</td>
+      <td>3.628490e+01</td>
+      <td>3.579169e+01</td>
+      <td>3.529975e+01</td>
+      <td>3.482077e+01</td>
+      <td>3.435775e+01</td>
+      <td>3.391303e+01</td>
+      <td>3.349127e+01</td>
+      <td>3.309241e+01</td>
       <td>NaN</td>
     </tr>
     <tr>
-      <th>470</th>
+      <th>1</th>
       <td>Africa Eastern and Southern</td>
       <td>AFE</td>
-      <td>GDP growth (annual %)</td>
-      <td>NY.GDP.MKTP.KD.ZG</td>
+      <td>GDP (constant 2015 US$)</td>
+      <td>NY.GDP.MKTP.KD</td>
+      <td>7.918201e+11</td>
+      <td>8.209659e+11</td>
+      <td>8.285440e+11</td>
+      <td>8.633446e+11</td>
+      <td>8.977436e+11</td>
+      <td>9.242525e+11</td>
+      <td>9.447434e+11</td>
+      <td>9.689017e+11</td>
+      <td>9.929813e+11</td>
+      <td>1.013099e+12</td>
+      <td>9.838518e+11</td>
+      <td>1.026194e+12</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Africa Western and Central</td>
+      <td>AFW</td>
+      <td>Birth rate, crude (per 1,000 people)</td>
+      <td>SP.DYN.CBRT.IN</td>
+      <td>4.060151e+01</td>
+      <td>4.024159e+01</td>
+      <td>3.985258e+01</td>
+      <td>3.943507e+01</td>
+      <td>3.899388e+01</td>
+      <td>3.853572e+01</td>
+      <td>3.806948e+01</td>
+      <td>3.760418e+01</td>
+      <td>3.714846e+01</td>
+      <td>3.670854e+01</td>
+      <td>3.628772e+01</td>
       <td>NaN</td>
-      <td>0.239594</td>
-      <td>7.980768</td>
-      <td>5.164334</td>
-      <td>4.579952</td>
-      <td>5.327717</td>
-      <td>...</td>
-      <td>9.230672e-01</td>
-      <td>4.200209e+00</td>
-      <td>3.984387e+00</td>
-      <td>2.952845e+00</td>
-      <td>2.217017e+00</td>
-      <td>2.557135e+00</td>
-      <td>2.485244e+00</td>
-      <td>2.025941e+00</td>
-      <td>-2.886856e+00</td>
-      <td>4.303667</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Africa Western and Central</td>
+      <td>AFW</td>
+      <td>GDP (constant 2015 US$)</td>
+      <td>NY.GDP.MKTP.KD</td>
+      <td>5.975663e+11</td>
+      <td>6.265383e+11</td>
+      <td>6.587611e+11</td>
+      <td>6.989731e+11</td>
+      <td>7.404038e+11</td>
+      <td>7.607345e+11</td>
+      <td>7.617070e+11</td>
+      <td>7.793610e+11</td>
+      <td>8.023692e+11</td>
+      <td>8.280654e+11</td>
+      <td>8.206375e+11</td>
+      <td>8.527638e+11</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Arab World</td>
+      <td>ARB</td>
+      <td>Birth rate, crude (per 1,000 people)</td>
+      <td>SP.DYN.CBRT.IN</td>
+      <td>2.751343e+01</td>
+      <td>2.748488e+01</td>
+      <td>2.738934e+01</td>
+      <td>2.721152e+01</td>
+      <td>2.694084e+01</td>
+      <td>2.657699e+01</td>
+      <td>2.613466e+01</td>
+      <td>2.564768e+01</td>
+      <td>2.514710e+01</td>
+      <td>2.465062e+01</td>
+      <td>2.417120e+01</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>2 rows × 66 columns</p>
 </div></div></div>
 </div>
-<p>For effective data analysis we need the data in the wide format but with the variable names in the columns</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_long</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Code&#39;</span><span class="p">],</span> 
-                  <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># focus on these countries</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s1">&#39;NLD&#39;</span><span class="p">,</span> <span class="s1">&#39;USA&#39;</span><span class="p">,</span> <span class="s1">&#39;JPN&#39;</span><span class="p">])]</span>
+<span class="n">df</span>
 
-<span class="n">df_wide</span> <span class="o">=</span> <span class="n">df_long</span><span class="o">.</span><span class="n">pivot_table</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Code&#39;</span><span class="p">],</span> 
-                              <span class="n">columns</span><span class="o">=</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">,</span> <span class="n">aggfunc</span><span class="o">=</span><span class="s1">&#39;first&#39;</span><span class="p">)</span>
+<span class="c1"># Melt columns</span>
+<span class="n">melt_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Code&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="n">melt_columns</span><span class="p">,</span> <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">)</span>
 
-<span class="n">df</span> <span class="o">=</span> <span class="n">df_wide</span><span class="o">.</span><span class="n">reset_index</span><span class="p">()</span>
+<span class="c1"># Remove missing values</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span>
+
+<span class="c1"># Convert &#39;Year&#39; column to numeric</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">])</span>
+
 <span class="n">df</span>
 </pre></div>
 </div>
@@ -549,66 +595,60 @@ document.write(`
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th>Indicator Name</th>
-      <th>Year</th>
+      <th></th>
       <th>Country Name</th>
       <th>Country Code</th>
-      <th>Foreign direct investment, net inflows (BoP, current US$)</th>
-      <th>GDP growth (annual %)</th>
-      <th>GNI per capita, PPP (current international $)</th>
-      <th>Individuals using the Internet (% of population)</th>
+      <th>Indicator Name</th>
+      <th>Indicator Code</th>
+      <th>Year</th>
+      <th>Value</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>1960</td>
-      <td>Botswana</td>
-      <td>BWA</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.0</td>
+      <td>Japan</td>
+      <td>JPN</td>
+      <td>Birth rate, crude (per 1,000 people)</td>
+      <td>SP.DYN.CBRT.IN</td>
+      <td>2010</td>
+      <td>8.500000e+00</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>1960</td>
-      <td>Burundi</td>
-      <td>BDI</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.0</td>
+      <td>Japan</td>
+      <td>JPN</td>
+      <td>GDP (constant 2015 US$)</td>
+      <td>NY.GDP.MKTP.KD</td>
+      <td>2010</td>
+      <td>4.218908e+12</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1960</td>
-      <td>Grenada</td>
-      <td>GRD</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.0</td>
+      <td>Netherlands</td>
+      <td>NLD</td>
+      <td>Birth rate, crude (per 1,000 people)</td>
+      <td>SP.DYN.CBRT.IN</td>
+      <td>2010</td>
+      <td>1.110000e+01</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>1960</td>
-      <td>Maldives</td>
-      <td>MDV</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.0</td>
+      <td>Netherlands</td>
+      <td>NLD</td>
+      <td>GDP (constant 2015 US$)</td>
+      <td>NY.GDP.MKTP.KD</td>
+      <td>2010</td>
+      <td>7.375657e+11</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>1960</td>
-      <td>Syrian Arab Republic</td>
-      <td>SYR</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>0.0</td>
+      <td>United States</td>
+      <td>USA</td>
+      <td>Birth rate, crude (per 1,000 people)</td>
+      <td>SP.DYN.CBRT.IN</td>
+      <td>2010</td>
+      <td>1.300000e+01</td>
     </tr>
     <tr>
       <th>...</th>
@@ -618,61 +658,55 @@ document.write(`
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th>13601</th>
-      <td>2021</td>
-      <td>West Bank and Gaza</td>
-      <td>PSE</td>
-      <td>NaN</td>
-      <td>7.050451</td>
-      <td>7370.0</td>
-      <td>NaN</td>
+      <th>64</th>
+      <td>United States</td>
+      <td>USA</td>
+      <td>Birth rate, crude (per 1,000 people)</td>
+      <td>SP.DYN.CBRT.IN</td>
+      <td>2020</td>
+      <td>1.090000e+01</td>
     </tr>
     <tr>
-      <th>13602</th>
-      <td>2021</td>
-      <td>Yemen, Rep.</td>
-      <td>YEM</td>
-      <td>NaN</td>
-      <td>-2.061513</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <th>65</th>
+      <td>United States</td>
+      <td>USA</td>
+      <td>GDP (constant 2015 US$)</td>
+      <td>NY.GDP.MKTP.KD</td>
+      <td>2020</td>
+      <td>1.924706e+13</td>
     </tr>
     <tr>
-      <th>13603</th>
+      <th>67</th>
+      <td>Japan</td>
+      <td>JPN</td>
+      <td>GDP (constant 2015 US$)</td>
+      <td>NY.GDP.MKTP.KD</td>
       <td>2021</td>
-      <td>Serbia</td>
-      <td>SRB</td>
-      <td>NaN</td>
-      <td>7.389271</td>
-      <td>20610.0</td>
-      <td>NaN</td>
+      <td>4.433848e+12</td>
     </tr>
     <tr>
-      <th>13604</th>
+      <th>69</th>
+      <td>Netherlands</td>
+      <td>NLD</td>
+      <td>GDP (constant 2015 US$)</td>
+      <td>NY.GDP.MKTP.KD</td>
       <td>2021</td>
-      <td>Montenegro</td>
-      <td>MNE</td>
-      <td>NaN</td>
-      <td>12.434359</td>
-      <td>23280.0</td>
-      <td>NaN</td>
+      <td>8.490392e+11</td>
     </tr>
     <tr>
-      <th>13605</th>
+      <th>71</th>
+      <td>United States</td>
+      <td>USA</td>
+      <td>GDP (constant 2015 US$)</td>
+      <td>NY.GDP.MKTP.KD</td>
       <td>2021</td>
-      <td>Kosovo</td>
-      <td>XKX</td>
-      <td>NaN</td>
-      <td>9.127578</td>
-      <td>13010.0</td>
-      <td>NaN</td>
+      <td>2.033858e+13</td>
     </tr>
   </tbody>
 </table>
-<p>13606 rows × 7 columns</p>
+<p>69 rows × 6 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -681,51 +715,44 @@ document.write(`
 <p>Testing plot</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_groups</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;France&quot;</span><span class="p">,</span>
-                  <span class="s2">&quot;India&quot;</span><span class="p">,</span>
-                  <span class="s2">&quot;Mexico&quot;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_birth_rate</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Indicator Name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;Birth rate, crude (per 1,000 people)&quot;</span><span class="p">]</span>
 
-<span class="n">df_groups</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">country_groups</span><span class="p">)]</span>
-
-<span class="k">for</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">country_groups</span><span class="p">:</span>
-    <span class="n">group_data</span> <span class="o">=</span> <span class="n">df_groups</span><span class="p">[</span><span class="n">df_groups</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">group</span><span class="p">]</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">group_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">group_data</span><span class="p">[</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;-&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">group</span><span class="p">)</span>
-
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Trend of Internet Usage Over Time&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">locs</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">()</span> 
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">locs</span><span class="p">[::</span><span class="mi">5</span><span class="p">],</span> <span class="n">df_groups</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()[::</span><span class="mi">5</span><span class="p">])</span>
+<span class="c1"># Line plot for birth rates</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">df_birth_rate</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">country_data</span> <span class="o">=</span> <span class="n">df_birth_rate</span><span class="p">[</span><span class="n">df_birth_rate</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">country_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">country_data</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">country</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Birth rate, crude (per 1,000 people)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Birth rate&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/85d4891214fa099d46c20a6317d26bee3a75876183118ac764edd0afb13a0ec1.png" src="../_images/85d4891214fa099d46c20a6317d26bee3a75876183118ac764edd0afb13a0ec1.png" />
+<img alt="../_images/3619d70ee86edc5a2d248306bbab5e37eae7320a95eebd7931a73dd1974aa06f.png" src="../_images/3619d70ee86edc5a2d248306bbab5e37eae7320a95eebd7931a73dd1974aa06f.png" />
 </div>
 </div>
-<p>There is a strong relation between GNI and internet usage</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_2020</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;2020&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_gdp</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;Indicator Name&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;GDP (constant 2015 US$)&quot;</span><span class="p">]</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">df_2020</span><span class="p">[</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">],</span> 
-            <span class="n">df_2020</span><span class="p">[</span><span class="s1">&#39;GNI per capita, PPP (current international $)&#39;</span><span class="p">],</span>
-            <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span>
-            <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Internet Usage vs GNI per Capita for 2021&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;GNI per capita, PPP (current international $)&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;Countries&#39;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># Line plot for GDP</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="k">for</span> <span class="n">country</span> <span class="ow">in</span> <span class="n">df_gdp</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">():</span>
+    <span class="n">country_data</span> <span class="o">=</span> <span class="n">df_gdp</span><span class="p">[</span><span class="n">df_gdp</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="n">country</span><span class="p">]</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">country_data</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">],</span> <span class="n">country_data</span><span class="p">[</span><span class="s1">&#39;Value&#39;</span><span class="p">],</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="n">country</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;GDP (constant 2015 US$)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;GDP&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Year&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d8a7b276f9dbcef2e4b00794bedae926993ada49f3962586181a9def561e10c5.png" src="../_images/d8a7b276f9dbcef2e4b00794bedae926993ada49f3962586181a9def561e10c5.png" />
+<img alt="../_images/08d690c52f20ef9a72b7fdf105f1d0f69f474b5306f19f0ef2a47b0707d378c9.png" src="../_images/08d690c52f20ef9a72b7fdf105f1d0f69f474b5306f19f0ef2a47b0707d378c9.png" />
 </div>
 </div>
 </section>
@@ -762,15 +789,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="home.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Jupyter Book Tutorial Group 70</p>
-      </div>
-    </a>
 </div></div>
   
 </div>
