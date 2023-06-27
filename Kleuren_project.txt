@@ -1,0 +1,12 @@
+Kleuren project: 
+- Rood: rgba(215,51,52,255)
+- vel rood: rgba(204,1,2,255)
+- veller rood: rgba(255,30,38,255)
+- licht rood: rgba(223,162,163,255)
+- licht licht rood: rgba(238,209,211,255)
+- middel rood: rgba(213,93,92,255)
+- grijs (achtergrond): rgba(242,242,242,255)
+- Blauw: rgba(67,111,154,255)
+- licht blauw: rgba(170,186,200,255)
+- donker grijs: rgba(177,184,190,255)
+- Wit: rgba(245,249,250,255)
