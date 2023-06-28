@@ -395,15 +395,12 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import packages</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="c1"># Remove SettingWithCopyWarning</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">mode</span><span class="o">.</span><span class="n">chained_assignment</span> <span class="o">=</span> <span class="kc">None</span>  <span class="c1"># default=&#39;warn&#39;</span>
 <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
 <span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="c1">#TESTxfu</span>
 </pre></div>
 </div>
 </div>
@@ -1249,9 +1246,61 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replace &#39;nan&#39; with np.nan</span>
+<span class="n">df_all_countries</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Convert columns to numeric data type</span>
+<span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+<span class="c1"># Replace missing values with linearly interpolated values</span>
+<span class="n">df_all_countries</span> <span class="o">=</span> <span class="n">df_all_countries</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_34994/1657942527.py:2: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_all_countries.replace(&#39;nan&#39;, np.nan, inplace=True)
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_34994/1657942527.py:5: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_all_countries[&#39;Individuals using the Internet (% of population)&#39;] = pd.to_numeric(df_all_countries[&#39;Individuals using the Internet (% of population)&#39;], errors=&#39;coerce&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save as pickle file. This datatype preserves all relevant information of the dataframe.</span>
 <span class="n">df_wide</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_wide.pkl&quot;</span><span class="p">)</span>
 <span class="n">df_all_countries</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_all_countries.pkl&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replace &#39;nan&#39; with np.nan</span>
+<span class="n">df_all_countries</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Convert columns to numeric data type</span>
+<span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, tertiary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, tertiary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, secondary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, secondary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+
+<span class="c1"># Replace missing values with linearly interpolated values</span>
+<span class="n">df_all_countries_clean</span> <span class="o">=</span> <span class="n">df_all_countries</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save as pickle file. This datatype preserves all relevant information of the dataframe.</span>
+<span class="n">df_all_countries_clean</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_all_countries_clean.pkl&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
