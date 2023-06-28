@@ -1,11 +1,8 @@
 NEW COLORS
-background: boring white #00000;
-            emphasis white #F2F0E9
-structure: 
-main:       dark #042440
-            lighter #053259
-
-test:       red 95190c
+background: #fef5e0 (light) #ccb990 (dark)
+structure: #140e01 (dark)
+emphasis: #0A64AE (blue)
+contrary: #AA1D0E (red)
 
 
 
@@ -22,7 +19,19 @@ test:       red 95190c
 
 
 
+MISC/ OLD
 
+background main: #fef5e0 (cosmic latte)
+           vary:
+structure  main: #140e01 (smoky black)
+           vary: 
+emphasis   main: #042440 (oxford blue)
+           vary: 
+contrary   main: #95190c (penn red)
+
+
+lighter #053259
+even lighter #0A64AE
 
 
 
