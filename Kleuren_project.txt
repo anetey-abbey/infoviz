@@ -1,3 +1,31 @@
+NEW COLORS
+background: boring white #00000;
+            emphasis white #F2F0E9
+structure: 
+main:       dark #042440
+            lighter #053259
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Kleuren project: 
 - Rood: rgba(215,51,52,255)
 - vel rood: rgba(204,1,2,255)
