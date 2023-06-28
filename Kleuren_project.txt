@@ -1,8 +1,16 @@
 NEW COLORS
-background: #fef5e0 (light) #ccb990 (dark)
-structure: #140e01 (dark)
-emphasis: #0A64AE (blue)
-contrary: #AA1D0E (red)
+background: #fef5e0 (cosmic latte) #ccb990 (ecru)
+structure: #140e01 (smoky black)
+emphasis: #0A64AE (green blue)
+contrary: #AA1D0E (rufous red)
+
+
+
+
+
+
+
+
 
 
 
