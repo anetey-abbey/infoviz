@@ -1240,10 +1240,322 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
 <span class="n">df_countrydata</span> <span class="o">=</span> <span class="n">df_countrydata</span><span class="p">[</span><span class="n">df_countrydata</span><span class="p">[</span><span class="s1">&#39;Income Group&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">notna</span><span class="p">()]</span>
 <span class="n">country_codes</span> <span class="o">=</span> <span class="n">df_countrydata</span><span class="p">[</span><span class="s1">&#39;Country Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
 <span class="n">df_all_countries</span> <span class="o">=</span> <span class="n">df_wide</span><span class="p">[</span><span class="n">df_wide</span><span class="p">[</span><span class="s1">&#39;Country Code&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">country_codes</span><span class="p">)]</span>
+<span class="n">df_all_countries</span>
 </pre></div>
 </div>
 </div>
 </details>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Country Name</th>
+      <th>Country Code</th>
+      <th>Access to electricity (% of population)</th>
+      <th>Adjusted savings: education expenditure (% of GNI)</th>
+      <th>Adjusted savings: education expenditure (current US$)</th>
+      <th>Compulsory education, duration (years)</th>
+      <th>Educational attainment, Doctoral or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>Educational attainment, at least Bachelor's or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>Educational attainment, at least Master's or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>...</th>
+      <th>Mobile cellular subscriptions</th>
+      <th>Mobile cellular subscriptions (per 100 people)</th>
+      <th>School enrollment, primary (% gross)</th>
+      <th>School enrollment, secondary (% gross)</th>
+      <th>School enrollment, secondary (% net)</th>
+      <th>School enrollment, tertiary (% gross)</th>
+      <th>Secondary education, duration (years)</th>
+      <th>Secondary education, pupils</th>
+      <th>Secure Internet servers</th>
+      <th>Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1990</td>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>NaN</td>
+      <td>1.953448</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>29.041420</td>
+      <td>10.849960</td>
+      <td>NaN</td>
+      <td>2.211410</td>
+      <td>6.0</td>
+      <td>182340.0</td>
+      <td>NaN</td>
+      <td>South Asia</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1990</td>
+      <td>Albania</td>
+      <td>ALB</td>
+      <td>100.000000</td>
+      <td>2.800000</td>
+      <td>5.674630e+07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>99.451752</td>
+      <td>90.081741</td>
+      <td>NaN</td>
+      <td>8.366360</td>
+      <td>8.0</td>
+      <td>475074.0</td>
+      <td>NaN</td>
+      <td>Europe &amp; Central Asia</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1990</td>
+      <td>Algeria</td>
+      <td>DZA</td>
+      <td>NaN</td>
+      <td>4.946261</td>
+      <td>2.957000e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>470.0</td>
+      <td>0.001825</td>
+      <td>92.593437</td>
+      <td>59.414188</td>
+      <td>NaN</td>
+      <td>10.293140</td>
+      <td>6.0</td>
+      <td>2162469.0</td>
+      <td>NaN</td>
+      <td>Middle East &amp; North Africa</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1990</td>
+      <td>American Samoa</td>
+      <td>ASM</td>
+      <td>NaN</td>
+      <td>11.760709</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>98.892731</td>
+      <td>90.757858</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>4.0</td>
+      <td>3437.0</td>
+      <td>NaN</td>
+      <td>East Asia &amp; Pacific</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1990</td>
+      <td>Andorra</td>
+      <td>AND</td>
+      <td>100.000000</td>
+      <td>3.300000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>Europe &amp; Central Asia</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>8205</th>
+      <td>2020</td>
+      <td>Virgin Islands (U.S.)</td>
+      <td>VIR</td>
+      <td>100.000000</td>
+      <td>9.356177</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>80000.0</td>
+      <td>76.610007</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>6.0</td>
+      <td>NaN</td>
+      <td>69.0</td>
+      <td>Latin America &amp; Caribbean</td>
+    </tr>
+    <tr>
+      <th>8206</th>
+      <td>2020</td>
+      <td>West Bank and Gaza</td>
+      <td>PSE</td>
+      <td>100.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>0.26999</td>
+      <td>21.708691</td>
+      <td>1.94667</td>
+      <td>...</td>
+      <td>4274119.0</td>
+      <td>83.783026</td>
+      <td>96.427193</td>
+      <td>91.027290</td>
+      <td>NaN</td>
+      <td>43.097672</td>
+      <td>8.0</td>
+      <td>806276.0</td>
+      <td>2573.0</td>
+      <td>Middle East &amp; North Africa</td>
+    </tr>
+    <tr>
+      <th>8208</th>
+      <td>2020</td>
+      <td>Yemen, Rep.</td>
+      <td>YEM</td>
+      <td>73.757927</td>
+      <td>3.600000</td>
+      <td>NaN</td>
+      <td>9.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>15178000.0</td>
+      <td>50.888548</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>6.0</td>
+      <td>NaN</td>
+      <td>169.0</td>
+      <td>Middle East &amp; North Africa</td>
+    </tr>
+    <tr>
+      <th>8209</th>
+      <td>2020</td>
+      <td>Zambia</td>
+      <td>ZMB</td>
+      <td>44.524475</td>
+      <td>3.563864</td>
+      <td>6.273000e+08</td>
+      <td>7.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>19104208.0</td>
+      <td>103.917835</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>NaN</td>
+      <td>745.0</td>
+      <td>Sub-Saharan Africa</td>
+    </tr>
+    <tr>
+      <th>8210</th>
+      <td>2020</td>
+      <td>Zimbabwe</td>
+      <td>ZWE</td>
+      <td>52.747669</td>
+      <td>1.910000</td>
+      <td>3.333000e+08</td>
+      <td>7.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>13191708.0</td>
+      <td>88.755806</td>
+      <td>97.304909</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>6.0</td>
+      <td>NaN</td>
+      <td>1107.0</td>
+      <td>Sub-Saharan Africa</td>
+    </tr>
+  </tbody>
+</table>
+<p>6692 rows × 33 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1255,16 +1567,17 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
 
 <span class="c1"># Replace missing values with linearly interpolated values</span>
 <span class="n">df_all_countries</span> <span class="o">=</span> <span class="n">df_all_countries</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="n">df_all_countries</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_40171/1657942527.py:2: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_42212/976440543.py:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries.replace(&#39;nan&#39;, np.nan, inplace=True)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_40171/1657942527.py:5: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_42212/976440543.py:5: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -1272,16 +1585,316 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   df_all_countries[&#39;Individuals using the Internet (% of population)&#39;] = pd.to_numeric(df_all_countries[&#39;Individuals using the Internet (% of population)&#39;], errors=&#39;coerce&#39;)
 </pre></div>
 </div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save as pickle file. This datatype preserves all relevant information of the dataframe.</span>
-<span class="n">df_wide</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_wide.pkl&quot;</span><span class="p">)</span>
-<span class="n">df_all_countries</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_all_countries.pkl&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Country Name</th>
+      <th>Country Code</th>
+      <th>Access to electricity (% of population)</th>
+      <th>Adjusted savings: education expenditure (% of GNI)</th>
+      <th>Adjusted savings: education expenditure (current US$)</th>
+      <th>Compulsory education, duration (years)</th>
+      <th>Educational attainment, Doctoral or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>Educational attainment, at least Bachelor's or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>Educational attainment, at least Master's or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>...</th>
+      <th>Mobile cellular subscriptions</th>
+      <th>Mobile cellular subscriptions (per 100 people)</th>
+      <th>School enrollment, primary (% gross)</th>
+      <th>School enrollment, secondary (% gross)</th>
+      <th>School enrollment, secondary (% net)</th>
+      <th>School enrollment, tertiary (% gross)</th>
+      <th>Secondary education, duration (years)</th>
+      <th>Secondary education, pupils</th>
+      <th>Secure Internet servers</th>
+      <th>Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1990</td>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>NaN</td>
+      <td>1.953448</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>29.041420</td>
+      <td>10.849960</td>
+      <td>NaN</td>
+      <td>2.211410</td>
+      <td>6.0</td>
+      <td>1.823400e+05</td>
+      <td>NaN</td>
+      <td>South Asia</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1990</td>
+      <td>Albania</td>
+      <td>ALB</td>
+      <td>100.000000</td>
+      <td>2.800000</td>
+      <td>5.674630e+07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>99.451752</td>
+      <td>90.081741</td>
+      <td>NaN</td>
+      <td>8.366360</td>
+      <td>8.0</td>
+      <td>4.750740e+05</td>
+      <td>NaN</td>
+      <td>Europe &amp; Central Asia</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1990</td>
+      <td>Algeria</td>
+      <td>DZA</td>
+      <td>100.000000</td>
+      <td>4.946261</td>
+      <td>2.957000e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>470.0</td>
+      <td>0.001825</td>
+      <td>92.593437</td>
+      <td>59.414188</td>
+      <td>NaN</td>
+      <td>10.293140</td>
+      <td>6.0</td>
+      <td>2.162469e+06</td>
+      <td>NaN</td>
+      <td>Middle East &amp; North Africa</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1990</td>
+      <td>American Samoa</td>
+      <td>ASM</td>
+      <td>100.000000</td>
+      <td>11.760709</td>
+      <td>2.118500e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>98.892731</td>
+      <td>90.757858</td>
+      <td>NaN</td>
+      <td>7.046450</td>
+      <td>4.0</td>
+      <td>3.437000e+03</td>
+      <td>NaN</td>
+      <td>East Asia &amp; Pacific</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1990</td>
+      <td>Andorra</td>
+      <td>AND</td>
+      <td>100.000000</td>
+      <td>3.300000</td>
+      <td>1.280000e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.000000</td>
+      <td>85.966160</td>
+      <td>49.580654</td>
+      <td>NaN</td>
+      <td>3.799760</td>
+      <td>7.0</td>
+      <td>8.729650e+04</td>
+      <td>NaN</td>
+      <td>Europe &amp; Central Asia</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>8205</th>
+      <td>2020</td>
+      <td>Virgin Islands (U.S.)</td>
+      <td>VIR</td>
+      <td>100.000000</td>
+      <td>9.356177</td>
+      <td>8.991825e+09</td>
+      <td>10.0</td>
+      <td>0.573083</td>
+      <td>24.344624</td>
+      <td>3.978658</td>
+      <td>...</td>
+      <td>80000.0</td>
+      <td>76.610007</td>
+      <td>106.792183</td>
+      <td>77.899291</td>
+      <td>61.87253</td>
+      <td>36.303374</td>
+      <td>6.0</td>
+      <td>5.454473e+05</td>
+      <td>69.0</td>
+      <td>Latin America &amp; Caribbean</td>
+    </tr>
+    <tr>
+      <th>8206</th>
+      <td>2020</td>
+      <td>West Bank and Gaza</td>
+      <td>PSE</td>
+      <td>100.000000</td>
+      <td>6.478089</td>
+      <td>6.203650e+09</td>
+      <td>10.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>4274119.0</td>
+      <td>83.783026</td>
+      <td>96.427193</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>8.0</td>
+      <td>8.062760e+05</td>
+      <td>2573.0</td>
+      <td>Middle East &amp; North Africa</td>
+    </tr>
+    <tr>
+      <th>8208</th>
+      <td>2020</td>
+      <td>Yemen, Rep.</td>
+      <td>YEM</td>
+      <td>73.757927</td>
+      <td>3.600000</td>
+      <td>3.415475e+09</td>
+      <td>9.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>15178000.0</td>
+      <td>50.888548</td>
+      <td>96.719765</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>6.0</td>
+      <td>8.062760e+05</td>
+      <td>169.0</td>
+      <td>Middle East &amp; North Africa</td>
+    </tr>
+    <tr>
+      <th>8209</th>
+      <td>2020</td>
+      <td>Zambia</td>
+      <td>ZMB</td>
+      <td>44.524475</td>
+      <td>3.563864</td>
+      <td>6.273000e+08</td>
+      <td>7.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>19104208.0</td>
+      <td>103.917835</td>
+      <td>97.012337</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>5.0</td>
+      <td>8.062760e+05</td>
+      <td>745.0</td>
+      <td>Sub-Saharan Africa</td>
+    </tr>
+    <tr>
+      <th>8210</th>
+      <td>2020</td>
+      <td>Zimbabwe</td>
+      <td>ZWE</td>
+      <td>52.747669</td>
+      <td>1.910000</td>
+      <td>3.333000e+08</td>
+      <td>7.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>13191708.0</td>
+      <td>88.755806</td>
+      <td>97.304909</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>6.0</td>
+      <td>8.062760e+05</td>
+      <td>1107.0</td>
+      <td>Sub-Saharan Africa</td>
+    </tr>
+  </tbody>
+</table>
+<p>6692 rows × 33 columns</p>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1300,7 +1913,1045 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Access the &quot;Region&quot; column and get unique values</span>
+<span class="n">unique_regions</span> <span class="o">=</span> <span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Region&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="c1"># Print the unique values</span>
+<span class="k">for</span> <span class="n">region</span> <span class="ow">in</span> <span class="n">unique_regions</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">region</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>South Asia
+Europe &amp; Central Asia
+Middle East &amp; North Africa
+East Asia &amp; Pacific
+Sub-Saharan Africa
+Latin America &amp; Caribbean
+North America
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">country_continent_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Afghanistan&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Albania&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Algeria&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;American Samoa&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Andorra&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Angola&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Antigua and Barbuda&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Argentina&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;Armenia&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Aruba&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Australia&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Austria&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Azerbaijan&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Bahamas, The&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Bahrain&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Bangladesh&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Barbados&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Belarus&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Belgium&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Belize&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Benin&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Bermuda&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Bhutan&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Bolivia&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;Bosnia and Herzegovina&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Botswana&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Brazil&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;British Virgin Islands&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Brunei Darussalam&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Bulgaria&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Burkina Faso&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Burundi&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Cabo Verde&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Cambodia&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Cameroon&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Canada&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Cayman Islands&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Central African Republic&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Chad&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Channel Islands&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Chile&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;China&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Colombia&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;Comoros&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Congo, Dem. Rep.&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Congo, Rep.&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Costa Rica&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s2">&quot;Cote d&#39;Ivoire&quot;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Croatia&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Cuba&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Curacao&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Cyprus&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Czech Republic&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Denmark&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Djibouti&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Dominica&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Dominican Republic&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Ecuador&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;Egypt, Arab Rep.&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;El Salvador&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Equatorial Guinea&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Eritrea&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Estonia&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Eswatini&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Ethiopia&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Faroe Islands&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Fiji&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Finland&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;France&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;French Polynesia&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Gabon&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Gambia, The&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Georgia&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Germany&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Ghana&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Gibraltar&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Greece&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Greenland&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Grenada&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Guam&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Guatemala&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Guinea&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Guinea-Bissau&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Guyana&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;Haiti&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Honduras&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Hong Kong SAR, China&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Hungary&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Iceland&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;India&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Indonesia&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Iran, Islamic Rep.&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Iraq&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Ireland&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Isle of Man&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Israel&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Italy&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Jamaica&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Japan&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Jordan&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Kazakhstan&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Kenya&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Kiribati&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s2">&quot;Korea, Dem. People&#39;s Rep.&quot;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Korea, Rep.&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Kosovo&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Kuwait&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Kyrgyz Republic&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Lao PDR&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Latvia&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Lebanon&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Lesotho&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Liberia&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Libya&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Liechtenstein&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Lithuania&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Luxembourg&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Macao SAR, China&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Madagascar&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Malawi&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Malaysia&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Maldives&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Mali&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Malta&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Marshall Islands&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Mauritania&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Mauritius&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Mexico&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Micronesia, Fed. Sts.&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Moldova&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Monaco&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Mongolia&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Montenegro&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Morocco&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Mozambique&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Myanmar&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Namibia&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Nauru&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Nepal&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Netherlands&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;New Caledonia&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;New Zealand&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Nicaragua&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Niger&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Nigeria&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;North Macedonia&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Northern Mariana Islands&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Norway&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Oman&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Pakistan&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Palau&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Panama&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Papua New Guinea&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Paraguay&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;Peru&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;Philippines&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Poland&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Portugal&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Puerto Rico&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Qatar&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Romania&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Russian Federation&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Rwanda&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Samoa&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;San Marino&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Sao Tome and Principe&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Saudi Arabia&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Senegal&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Serbia&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Seychelles&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Sierra Leone&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Singapore&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Sint Maarten (Dutch part)&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Slovak Republic&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Slovenia&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Solomon Islands&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Somalia&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;South Africa&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;South Sudan&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Spain&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Sri Lanka&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;St. Kitts and Nevis&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;St. Lucia&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;St. Martin (French part)&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;St. Vincent and the Grenadines&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Sudan&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Suriname&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;Sweden&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Switzerland&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;Syrian Arab Republic&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Tajikistan&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Tanzania&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Thailand&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Timor-Leste&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Togo&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Tonga&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Trinidad and Tobago&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Tunisia&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Turkiye&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Turkmenistan&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Turks and Caicos Islands&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Tuvalu&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Uganda&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Ukraine&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;United Arab Emirates&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;United Kingdom&#39;</span><span class="p">:</span> <span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;United States&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;Uruguay&#39;</span><span class="p">:</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;Uzbekistan&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Vanuatu&#39;</span><span class="p">:</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">,</span> <span class="s1">&#39;Vietnam&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Virgin Islands (U.S.)&#39;</span><span class="p">:</span> <span class="s1">&#39;North America&#39;</span><span class="p">,</span> <span class="s1">&#39;West Bank and Gaza&#39;</span><span class="p">:</span> <span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Yemen, Rep.&#39;</span><span class="p">:</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">,</span> <span class="s1">&#39;Zambia&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;Zimbabwe&#39;</span><span class="p">:</span> <span class="s1">&#39;Africa&#39;</span><span class="p">}</span>
+
+<span class="n">unique_values</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">country_continent_dict</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">unique_values</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Oceania
+Africa
+Asia
+Europe
+South America
+North America
+Middle East
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">group_continents</span><span class="p">(</span><span class="n">country_continent_dict</span><span class="p">):</span>
+    <span class="n">new_dict</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="k">for</span> <span class="n">country</span><span class="p">,</span> <span class="n">continent</span> <span class="ow">in</span> <span class="n">country_continent_dict</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">continent</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Africa&#39;</span><span class="p">,</span> <span class="s1">&#39;South America&#39;</span><span class="p">,</span> <span class="s1">&#39;Middle East&#39;</span><span class="p">]:</span>
+            <span class="n">new_continent</span> <span class="o">=</span> <span class="s1">&#39;Africa &amp; South America &amp; Middle East&#39;</span>
+        <span class="k">elif</span> <span class="n">continent</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Europe&#39;</span><span class="p">,</span> <span class="s1">&#39;North America&#39;</span><span class="p">]:</span>
+            <span class="n">new_continent</span> <span class="o">=</span> <span class="s1">&#39;Europe &amp; North America&#39;</span>
+        <span class="k">elif</span> <span class="n">continent</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Asia&#39;</span><span class="p">,</span> <span class="s1">&#39;Oceania&#39;</span><span class="p">]:</span>
+            <span class="n">new_continent</span> <span class="o">=</span> <span class="s1">&#39;Asia &amp; Oceania&#39;</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">new_continent</span> <span class="o">=</span> <span class="n">continent</span>
+        <span class="n">new_dict</span><span class="p">[</span><span class="n">country</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_continent</span>
+    <span class="k">return</span> <span class="n">new_dict</span>
+
+<span class="n">digital_divide_regions</span> <span class="o">=</span> <span class="n">group_continents</span><span class="p">(</span><span class="n">country_continent_dict</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">digital_divide_regions</span><span class="p">)</span>
+
+<span class="n">unique_values</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">digital_divide_regions</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+<span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">unique_values</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Afghanistan&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Albania&#39;: &#39;Europe &amp; North America&#39;, &#39;Algeria&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;American Samoa&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Andorra&#39;: &#39;Europe &amp; North America&#39;, &#39;Angola&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Antigua and Barbuda&#39;: &#39;Europe &amp; North America&#39;, &#39;Argentina&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Armenia&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Aruba&#39;: &#39;Europe &amp; North America&#39;, &#39;Australia&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Austria&#39;: &#39;Europe &amp; North America&#39;, &#39;Azerbaijan&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Bahamas, The&#39;: &#39;Europe &amp; North America&#39;, &#39;Bahrain&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Bangladesh&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Barbados&#39;: &#39;Europe &amp; North America&#39;, &#39;Belarus&#39;: &#39;Europe &amp; North America&#39;, &#39;Belgium&#39;: &#39;Europe &amp; North America&#39;, &#39;Belize&#39;: &#39;Europe &amp; North America&#39;, &#39;Benin&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Bermuda&#39;: &#39;Europe &amp; North America&#39;, &#39;Bhutan&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Bolivia&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Bosnia and Herzegovina&#39;: &#39;Europe &amp; North America&#39;, &#39;Botswana&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Brazil&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;British Virgin Islands&#39;: &#39;Europe &amp; North America&#39;, &#39;Brunei Darussalam&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Bulgaria&#39;: &#39;Europe &amp; North America&#39;, &#39;Burkina Faso&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Burundi&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Cabo Verde&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Cambodia&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Cameroon&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Canada&#39;: &#39;Europe &amp; North America&#39;, &#39;Cayman Islands&#39;: &#39;Europe &amp; North America&#39;, &#39;Central African Republic&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Chad&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Channel Islands&#39;: &#39;Europe &amp; North America&#39;, &#39;Chile&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;China&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Colombia&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Comoros&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Congo, Dem. Rep.&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Congo, Rep.&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Costa Rica&#39;: &#39;Europe &amp; North America&#39;, &quot;Cote d&#39;Ivoire&quot;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Croatia&#39;: &#39;Europe &amp; North America&#39;, &#39;Cuba&#39;: &#39;Europe &amp; North America&#39;, &#39;Curacao&#39;: &#39;Europe &amp; North America&#39;, &#39;Cyprus&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Czech Republic&#39;: &#39;Europe &amp; North America&#39;, &#39;Denmark&#39;: &#39;Europe &amp; North America&#39;, &#39;Djibouti&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Dominica&#39;: &#39;Europe &amp; North America&#39;, &#39;Dominican Republic&#39;: &#39;Europe &amp; North America&#39;, &#39;Ecuador&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Egypt, Arab Rep.&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;El Salvador&#39;: &#39;Europe &amp; North America&#39;, &#39;Equatorial Guinea&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Eritrea&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Estonia&#39;: &#39;Europe &amp; North America&#39;, &#39;Eswatini&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Ethiopia&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Faroe Islands&#39;: &#39;Europe &amp; North America&#39;, &#39;Fiji&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Finland&#39;: &#39;Europe &amp; North America&#39;, &#39;France&#39;: &#39;Europe &amp; North America&#39;, &#39;French Polynesia&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Gabon&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Gambia, The&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Georgia&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Germany&#39;: &#39;Europe &amp; North America&#39;, &#39;Ghana&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Gibraltar&#39;: &#39;Europe &amp; North America&#39;, &#39;Greece&#39;: &#39;Europe &amp; North America&#39;, &#39;Greenland&#39;: &#39;Europe &amp; North America&#39;, &#39;Grenada&#39;: &#39;Europe &amp; North America&#39;, &#39;Guam&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Guatemala&#39;: &#39;Europe &amp; North America&#39;, &#39;Guinea&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Guinea-Bissau&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Guyana&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Haiti&#39;: &#39;Europe &amp; North America&#39;, &#39;Honduras&#39;: &#39;Europe &amp; North America&#39;, &#39;Hong Kong SAR, China&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Hungary&#39;: &#39;Europe &amp; North America&#39;, &#39;Iceland&#39;: &#39;Europe &amp; North America&#39;, &#39;India&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Indonesia&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Iran, Islamic Rep.&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Iraq&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Ireland&#39;: &#39;Europe &amp; North America&#39;, &#39;Isle of Man&#39;: &#39;Europe &amp; North America&#39;, &#39;Israel&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Italy&#39;: &#39;Europe &amp; North America&#39;, &#39;Jamaica&#39;: &#39;Europe &amp; North America&#39;, &#39;Japan&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Jordan&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Kazakhstan&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Kenya&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Kiribati&#39;: &#39;Asia &amp; Oceania&#39;, &quot;Korea, Dem. People&#39;s Rep.&quot;: &#39;Asia &amp; Oceania&#39;, &#39;Korea, Rep.&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Kosovo&#39;: &#39;Europe &amp; North America&#39;, &#39;Kuwait&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Kyrgyz Republic&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Lao PDR&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Latvia&#39;: &#39;Europe &amp; North America&#39;, &#39;Lebanon&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Lesotho&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Liberia&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Libya&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Liechtenstein&#39;: &#39;Europe &amp; North America&#39;, &#39;Lithuania&#39;: &#39;Europe &amp; North America&#39;, &#39;Luxembourg&#39;: &#39;Europe &amp; North America&#39;, &#39;Macao SAR, China&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Madagascar&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Malawi&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Malaysia&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Maldives&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Mali&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Malta&#39;: &#39;Europe &amp; North America&#39;, &#39;Marshall Islands&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Mauritania&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Mauritius&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Mexico&#39;: &#39;Europe &amp; North America&#39;, &#39;Micronesia, Fed. Sts.&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Moldova&#39;: &#39;Europe &amp; North America&#39;, &#39;Monaco&#39;: &#39;Europe &amp; North America&#39;, &#39;Mongolia&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Montenegro&#39;: &#39;Europe &amp; North America&#39;, &#39;Morocco&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Mozambique&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Myanmar&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Namibia&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Nauru&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Nepal&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Netherlands&#39;: &#39;Europe &amp; North America&#39;, &#39;New Caledonia&#39;: &#39;Asia &amp; Oceania&#39;, &#39;New Zealand&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Nicaragua&#39;: &#39;Europe &amp; North America&#39;, &#39;Niger&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Nigeria&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;North Macedonia&#39;: &#39;Europe &amp; North America&#39;, &#39;Northern Mariana Islands&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Norway&#39;: &#39;Europe &amp; North America&#39;, &#39;Oman&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Pakistan&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Palau&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Panama&#39;: &#39;Europe &amp; North America&#39;, &#39;Papua New Guinea&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Paraguay&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Peru&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Philippines&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Poland&#39;: &#39;Europe &amp; North America&#39;, &#39;Portugal&#39;: &#39;Europe &amp; North America&#39;, &#39;Puerto Rico&#39;: &#39;Europe &amp; North America&#39;, &#39;Qatar&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Romania&#39;: &#39;Europe &amp; North America&#39;, &#39;Russian Federation&#39;: &#39;Europe &amp; North America&#39;, &#39;Rwanda&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Samoa&#39;: &#39;Asia &amp; Oceania&#39;, &#39;San Marino&#39;: &#39;Europe &amp; North America&#39;, &#39;Sao Tome and Principe&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Saudi Arabia&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Senegal&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Serbia&#39;: &#39;Europe &amp; North America&#39;, &#39;Seychelles&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Sierra Leone&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Singapore&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Sint Maarten (Dutch part)&#39;: &#39;Europe &amp; North America&#39;, &#39;Slovak Republic&#39;: &#39;Europe &amp; North America&#39;, &#39;Slovenia&#39;: &#39;Europe &amp; North America&#39;, &#39;Solomon Islands&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Somalia&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;South Africa&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;South Sudan&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Spain&#39;: &#39;Europe &amp; North America&#39;, &#39;Sri Lanka&#39;: &#39;Asia &amp; Oceania&#39;, &#39;St. Kitts and Nevis&#39;: &#39;Europe &amp; North America&#39;, &#39;St. Lucia&#39;: &#39;Europe &amp; North America&#39;, &#39;St. Martin (French part)&#39;: &#39;Europe &amp; North America&#39;, &#39;St. Vincent and the Grenadines&#39;: &#39;Europe &amp; North America&#39;, &#39;Sudan&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Suriname&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Sweden&#39;: &#39;Europe &amp; North America&#39;, &#39;Switzerland&#39;: &#39;Europe &amp; North America&#39;, &#39;Syrian Arab Republic&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Tajikistan&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Tanzania&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Thailand&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Timor-Leste&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Togo&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Tonga&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Trinidad and Tobago&#39;: &#39;Europe &amp; North America&#39;, &#39;Tunisia&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Turkiye&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Turkmenistan&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Turks and Caicos Islands&#39;: &#39;Europe &amp; North America&#39;, &#39;Tuvalu&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Uganda&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Ukraine&#39;: &#39;Europe &amp; North America&#39;, &#39;United Arab Emirates&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;United Kingdom&#39;: &#39;Europe &amp; North America&#39;, &#39;United States&#39;: &#39;Europe &amp; North America&#39;, &#39;Uruguay&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Uzbekistan&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Vanuatu&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Vietnam&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Virgin Islands (U.S.)&#39;: &#39;Europe &amp; North America&#39;, &#39;West Bank and Gaza&#39;: &#39;Asia &amp; Oceania&#39;, &#39;Yemen, Rep.&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Zambia&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;, &#39;Zimbabwe&#39;: &#39;Africa &amp; South America &amp; Middle East&#39;}
+Asia &amp; Oceania
+Europe &amp; North America
+Africa &amp; South America &amp; Middle East
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Digital Divide Region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">digital_divide_regions</span><span class="p">)</span>
+<span class="n">df_all_countries</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Country Name</th>
+      <th>Country Code</th>
+      <th>Access to electricity (% of population)</th>
+      <th>Adjusted savings: education expenditure (% of GNI)</th>
+      <th>Adjusted savings: education expenditure (current US$)</th>
+      <th>Compulsory education, duration (years)</th>
+      <th>Educational attainment, Doctoral or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>Educational attainment, at least Bachelor's or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>Educational attainment, at least Master's or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>...</th>
+      <th>Mobile cellular subscriptions (per 100 people)</th>
+      <th>School enrollment, primary (% gross)</th>
+      <th>School enrollment, secondary (% gross)</th>
+      <th>School enrollment, secondary (% net)</th>
+      <th>School enrollment, tertiary (% gross)</th>
+      <th>Secondary education, duration (years)</th>
+      <th>Secondary education, pupils</th>
+      <th>Secure Internet servers</th>
+      <th>Region</th>
+      <th>Digital Divide Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1990</td>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>NaN</td>
+      <td>1.953448</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>29.041420</td>
+      <td>10.849960</td>
+      <td>NaN</td>
+      <td>2.211410</td>
+      <td>6.0</td>
+      <td>1.823400e+05</td>
+      <td>NaN</td>
+      <td>South Asia</td>
+      <td>Asia &amp; Oceania</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1990</td>
+      <td>Albania</td>
+      <td>ALB</td>
+      <td>100.000000</td>
+      <td>2.800000</td>
+      <td>5.674630e+07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>99.451752</td>
+      <td>90.081741</td>
+      <td>NaN</td>
+      <td>8.366360</td>
+      <td>8.0</td>
+      <td>4.750740e+05</td>
+      <td>NaN</td>
+      <td>Europe &amp; Central Asia</td>
+      <td>Europe &amp; North America</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1990</td>
+      <td>Algeria</td>
+      <td>DZA</td>
+      <td>100.000000</td>
+      <td>4.946261</td>
+      <td>2.957000e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.001825</td>
+      <td>92.593437</td>
+      <td>59.414188</td>
+      <td>NaN</td>
+      <td>10.293140</td>
+      <td>6.0</td>
+      <td>2.162469e+06</td>
+      <td>NaN</td>
+      <td>Middle East &amp; North Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1990</td>
+      <td>American Samoa</td>
+      <td>ASM</td>
+      <td>100.000000</td>
+      <td>11.760709</td>
+      <td>2.118500e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>98.892731</td>
+      <td>90.757858</td>
+      <td>NaN</td>
+      <td>7.046450</td>
+      <td>4.0</td>
+      <td>3.437000e+03</td>
+      <td>NaN</td>
+      <td>East Asia &amp; Pacific</td>
+      <td>Asia &amp; Oceania</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1990</td>
+      <td>Andorra</td>
+      <td>AND</td>
+      <td>100.000000</td>
+      <td>3.300000</td>
+      <td>1.280000e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>85.966160</td>
+      <td>49.580654</td>
+      <td>NaN</td>
+      <td>3.799760</td>
+      <td>7.0</td>
+      <td>8.729650e+04</td>
+      <td>NaN</td>
+      <td>Europe &amp; Central Asia</td>
+      <td>Europe &amp; North America</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>8205</th>
+      <td>2020</td>
+      <td>Virgin Islands (U.S.)</td>
+      <td>VIR</td>
+      <td>100.000000</td>
+      <td>9.356177</td>
+      <td>8.991825e+09</td>
+      <td>10.0</td>
+      <td>0.573083</td>
+      <td>24.344624</td>
+      <td>3.978658</td>
+      <td>...</td>
+      <td>76.610007</td>
+      <td>106.792183</td>
+      <td>77.899291</td>
+      <td>61.87253</td>
+      <td>36.303374</td>
+      <td>6.0</td>
+      <td>5.454473e+05</td>
+      <td>69.0</td>
+      <td>Latin America &amp; Caribbean</td>
+      <td>Europe &amp; North America</td>
+    </tr>
+    <tr>
+      <th>8206</th>
+      <td>2020</td>
+      <td>West Bank and Gaza</td>
+      <td>PSE</td>
+      <td>100.000000</td>
+      <td>6.478089</td>
+      <td>6.203650e+09</td>
+      <td>10.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>83.783026</td>
+      <td>96.427193</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>8.0</td>
+      <td>8.062760e+05</td>
+      <td>2573.0</td>
+      <td>Middle East &amp; North Africa</td>
+      <td>Asia &amp; Oceania</td>
+    </tr>
+    <tr>
+      <th>8208</th>
+      <td>2020</td>
+      <td>Yemen, Rep.</td>
+      <td>YEM</td>
+      <td>73.757927</td>
+      <td>3.600000</td>
+      <td>3.415475e+09</td>
+      <td>9.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>50.888548</td>
+      <td>96.719765</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>6.0</td>
+      <td>8.062760e+05</td>
+      <td>169.0</td>
+      <td>Middle East &amp; North Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+    <tr>
+      <th>8209</th>
+      <td>2020</td>
+      <td>Zambia</td>
+      <td>ZMB</td>
+      <td>44.524475</td>
+      <td>3.563864</td>
+      <td>6.273000e+08</td>
+      <td>7.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>103.917835</td>
+      <td>97.012337</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>5.0</td>
+      <td>8.062760e+05</td>
+      <td>745.0</td>
+      <td>Sub-Saharan Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+    <tr>
+      <th>8210</th>
+      <td>2020</td>
+      <td>Zimbabwe</td>
+      <td>ZWE</td>
+      <td>52.747669</td>
+      <td>1.910000</td>
+      <td>3.333000e+08</td>
+      <td>7.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>88.755806</td>
+      <td>97.304909</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>6.0</td>
+      <td>8.062760e+05</td>
+      <td>1107.0</td>
+      <td>Sub-Saharan Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+  </tbody>
+</table>
+<p>6692 rows × 34 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Digital Divide Region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">digital_divide_regions</span><span class="p">)</span>
+<span class="n">df_all_countries</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Country Name</th>
+      <th>Country Code</th>
+      <th>Access to electricity (% of population)</th>
+      <th>Adjusted savings: education expenditure (% of GNI)</th>
+      <th>Adjusted savings: education expenditure (current US$)</th>
+      <th>Compulsory education, duration (years)</th>
+      <th>Educational attainment, Doctoral or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>Educational attainment, at least Bachelor's or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>Educational attainment, at least Master's or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>...</th>
+      <th>Mobile cellular subscriptions (per 100 people)</th>
+      <th>School enrollment, primary (% gross)</th>
+      <th>School enrollment, secondary (% gross)</th>
+      <th>School enrollment, secondary (% net)</th>
+      <th>School enrollment, tertiary (% gross)</th>
+      <th>Secondary education, duration (years)</th>
+      <th>Secondary education, pupils</th>
+      <th>Secure Internet servers</th>
+      <th>Region</th>
+      <th>Digital Divide Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1990</td>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>NaN</td>
+      <td>1.953448</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>29.041420</td>
+      <td>10.849960</td>
+      <td>NaN</td>
+      <td>2.211410</td>
+      <td>6.0</td>
+      <td>1.823400e+05</td>
+      <td>NaN</td>
+      <td>South Asia</td>
+      <td>Asia &amp; Oceania</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1990</td>
+      <td>Albania</td>
+      <td>ALB</td>
+      <td>100.000000</td>
+      <td>2.800000</td>
+      <td>5.674630e+07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>99.451752</td>
+      <td>90.081741</td>
+      <td>NaN</td>
+      <td>8.366360</td>
+      <td>8.0</td>
+      <td>4.750740e+05</td>
+      <td>NaN</td>
+      <td>Europe &amp; Central Asia</td>
+      <td>Europe &amp; North America</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1990</td>
+      <td>Algeria</td>
+      <td>DZA</td>
+      <td>100.000000</td>
+      <td>4.946261</td>
+      <td>2.957000e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.001825</td>
+      <td>92.593437</td>
+      <td>59.414188</td>
+      <td>NaN</td>
+      <td>10.293140</td>
+      <td>6.0</td>
+      <td>2.162469e+06</td>
+      <td>NaN</td>
+      <td>Middle East &amp; North Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1990</td>
+      <td>American Samoa</td>
+      <td>ASM</td>
+      <td>100.000000</td>
+      <td>11.760709</td>
+      <td>2.118500e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>98.892731</td>
+      <td>90.757858</td>
+      <td>NaN</td>
+      <td>7.046450</td>
+      <td>4.0</td>
+      <td>3.437000e+03</td>
+      <td>NaN</td>
+      <td>East Asia &amp; Pacific</td>
+      <td>Asia &amp; Oceania</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1990</td>
+      <td>Andorra</td>
+      <td>AND</td>
+      <td>100.000000</td>
+      <td>3.300000</td>
+      <td>1.280000e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>85.966160</td>
+      <td>49.580654</td>
+      <td>NaN</td>
+      <td>3.799760</td>
+      <td>7.0</td>
+      <td>8.729650e+04</td>
+      <td>NaN</td>
+      <td>Europe &amp; Central Asia</td>
+      <td>Europe &amp; North America</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>8205</th>
+      <td>2020</td>
+      <td>Virgin Islands (U.S.)</td>
+      <td>VIR</td>
+      <td>100.000000</td>
+      <td>9.356177</td>
+      <td>8.991825e+09</td>
+      <td>10.0</td>
+      <td>0.573083</td>
+      <td>24.344624</td>
+      <td>3.978658</td>
+      <td>...</td>
+      <td>76.610007</td>
+      <td>106.792183</td>
+      <td>77.899291</td>
+      <td>61.87253</td>
+      <td>36.303374</td>
+      <td>6.0</td>
+      <td>5.454473e+05</td>
+      <td>69.0</td>
+      <td>Latin America &amp; Caribbean</td>
+      <td>Europe &amp; North America</td>
+    </tr>
+    <tr>
+      <th>8206</th>
+      <td>2020</td>
+      <td>West Bank and Gaza</td>
+      <td>PSE</td>
+      <td>100.000000</td>
+      <td>6.478089</td>
+      <td>6.203650e+09</td>
+      <td>10.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>83.783026</td>
+      <td>96.427193</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>8.0</td>
+      <td>8.062760e+05</td>
+      <td>2573.0</td>
+      <td>Middle East &amp; North Africa</td>
+      <td>Asia &amp; Oceania</td>
+    </tr>
+    <tr>
+      <th>8208</th>
+      <td>2020</td>
+      <td>Yemen, Rep.</td>
+      <td>YEM</td>
+      <td>73.757927</td>
+      <td>3.600000</td>
+      <td>3.415475e+09</td>
+      <td>9.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>50.888548</td>
+      <td>96.719765</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>6.0</td>
+      <td>8.062760e+05</td>
+      <td>169.0</td>
+      <td>Middle East &amp; North Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+    <tr>
+      <th>8209</th>
+      <td>2020</td>
+      <td>Zambia</td>
+      <td>ZMB</td>
+      <td>44.524475</td>
+      <td>3.563864</td>
+      <td>6.273000e+08</td>
+      <td>7.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>103.917835</td>
+      <td>97.012337</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>5.0</td>
+      <td>8.062760e+05</td>
+      <td>745.0</td>
+      <td>Sub-Saharan Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+    <tr>
+      <th>8210</th>
+      <td>2020</td>
+      <td>Zimbabwe</td>
+      <td>ZWE</td>
+      <td>52.747669</td>
+      <td>1.910000</td>
+      <td>3.333000e+08</td>
+      <td>7.0</td>
+      <td>0.269990</td>
+      <td>21.708691</td>
+      <td>1.946670</td>
+      <td>...</td>
+      <td>88.755806</td>
+      <td>97.304909</td>
+      <td>91.027290</td>
+      <td>61.87253</td>
+      <td>43.097672</td>
+      <td>6.0</td>
+      <td>8.062760e+05</td>
+      <td>1107.0</td>
+      <td>Sub-Saharan Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+  </tbody>
+</table>
+<p>6692 rows × 34 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_wide</span><span class="p">[</span><span class="s1">&#39;Digital Divide Region&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_wide</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">digital_divide_regions</span><span class="p">)</span>
+<span class="n">df_wide</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Country Name</th>
+      <th>Country Code</th>
+      <th>Access to electricity (% of population)</th>
+      <th>Adjusted savings: education expenditure (% of GNI)</th>
+      <th>Adjusted savings: education expenditure (current US$)</th>
+      <th>Compulsory education, duration (years)</th>
+      <th>Educational attainment, Doctoral or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>Educational attainment, at least Bachelor's or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>Educational attainment, at least Master's or equivalent, population 25+, total (%) (cumulative)</th>
+      <th>...</th>
+      <th>Mobile cellular subscriptions (per 100 people)</th>
+      <th>School enrollment, primary (% gross)</th>
+      <th>School enrollment, secondary (% gross)</th>
+      <th>School enrollment, secondary (% net)</th>
+      <th>School enrollment, tertiary (% gross)</th>
+      <th>Secondary education, duration (years)</th>
+      <th>Secondary education, pupils</th>
+      <th>Secure Internet servers</th>
+      <th>Region</th>
+      <th>Digital Divide Region</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1990</td>
+      <td>Afghanistan</td>
+      <td>AFG</td>
+      <td>NaN</td>
+      <td>1.953448</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>29.041420</td>
+      <td>10.849960</td>
+      <td>NaN</td>
+      <td>2.211410</td>
+      <td>6.0</td>
+      <td>182340.0</td>
+      <td>NaN</td>
+      <td>South Asia</td>
+      <td>Asia &amp; Oceania</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1990</td>
+      <td>Africa Eastern and Southern</td>
+      <td>AFE</td>
+      <td>NaN</td>
+      <td>4.426717</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.002587</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>6.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1990</td>
+      <td>Africa Western and Central</td>
+      <td>AFW</td>
+      <td>NaN</td>
+      <td>2.615379</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>7.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1990</td>
+      <td>Albania</td>
+      <td>ALB</td>
+      <td>100.000000</td>
+      <td>2.800000</td>
+      <td>5.674630e+07</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.000000</td>
+      <td>99.451752</td>
+      <td>90.081741</td>
+      <td>NaN</td>
+      <td>8.366360</td>
+      <td>8.0</td>
+      <td>475074.0</td>
+      <td>NaN</td>
+      <td>Europe &amp; Central Asia</td>
+      <td>Europe &amp; North America</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1990</td>
+      <td>Algeria</td>
+      <td>DZA</td>
+      <td>NaN</td>
+      <td>4.946261</td>
+      <td>2.957000e+09</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>0.001825</td>
+      <td>92.593437</td>
+      <td>59.414188</td>
+      <td>NaN</td>
+      <td>10.293140</td>
+      <td>6.0</td>
+      <td>2162469.0</td>
+      <td>NaN</td>
+      <td>Middle East &amp; North Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>8206</th>
+      <td>2020</td>
+      <td>West Bank and Gaza</td>
+      <td>PSE</td>
+      <td>100.000000</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>0.26999</td>
+      <td>21.708691</td>
+      <td>1.94667</td>
+      <td>...</td>
+      <td>83.783026</td>
+      <td>96.427193</td>
+      <td>91.027290</td>
+      <td>NaN</td>
+      <td>43.097672</td>
+      <td>8.0</td>
+      <td>806276.0</td>
+      <td>2573.0</td>
+      <td>Middle East &amp; North Africa</td>
+      <td>Asia &amp; Oceania</td>
+    </tr>
+    <tr>
+      <th>8207</th>
+      <td>2020</td>
+      <td>World</td>
+      <td>WLD</td>
+      <td>90.521569</td>
+      <td>3.872891</td>
+      <td>NaN</td>
+      <td>10.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>106.152775</td>
+      <td>102.407066</td>
+      <td>76.750740</td>
+      <td>NaN</td>
+      <td>40.244061</td>
+      <td>6.0</td>
+      <td>613156032.0</td>
+      <td>89189073.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8208</th>
+      <td>2020</td>
+      <td>Yemen, Rep.</td>
+      <td>YEM</td>
+      <td>73.757927</td>
+      <td>3.600000</td>
+      <td>NaN</td>
+      <td>9.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>50.888548</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>6.0</td>
+      <td>NaN</td>
+      <td>169.0</td>
+      <td>Middle East &amp; North Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+    <tr>
+      <th>8209</th>
+      <td>2020</td>
+      <td>Zambia</td>
+      <td>ZMB</td>
+      <td>44.524475</td>
+      <td>3.563864</td>
+      <td>6.273000e+08</td>
+      <td>7.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>103.917835</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>5.0</td>
+      <td>NaN</td>
+      <td>745.0</td>
+      <td>Sub-Saharan Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+    <tr>
+      <th>8210</th>
+      <td>2020</td>
+      <td>Zimbabwe</td>
+      <td>ZWE</td>
+      <td>52.747669</td>
+      <td>1.910000</td>
+      <td>3.333000e+08</td>
+      <td>7.0</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>...</td>
+      <td>88.755806</td>
+      <td>97.304909</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>6.0</td>
+      <td>NaN</td>
+      <td>1107.0</td>
+      <td>Sub-Saharan Africa</td>
+      <td>Africa &amp; South America &amp; Middle East</td>
+    </tr>
+  </tbody>
+</table>
+<p>8211 rows × 34 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Save as pickle file. This datatype preserves all relevant information of the dataframe.</span>
+<span class="n">df_wide</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_wide.pkl&quot;</span><span class="p">)</span>
+<span class="n">df_all_countries</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_all_countries.pkl&quot;</span><span class="p">)</span>
 <span class="n">df_all_countries_clean</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_all_countries_clean.pkl&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -1373,7 +3024,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
   <div class="footer-item">
     
 <p class="component-author">
-By Team 70
+By Team H2
 </p>
 
   </div>
