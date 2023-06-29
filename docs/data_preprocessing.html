@@ -469,7 +469,8 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
                        <span class="s1">&#39;School enrollment, secondary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">,</span>
                        <span class="s1">&#39;School enrollment, primary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">,</span>
                        <span class="s1">&#39;Literacy rate, youth total (</span><span class="si">% o</span><span class="s1">f people ages 15-24)&#39;</span><span class="p">,</span>
-                       <span class="s1">&#39;Literacy rate, adult total (</span><span class="si">% o</span><span class="s1">f people ages 15 and above)&#39;</span><span class="p">]</span>
+                       <span class="s1">&#39;Literacy rate, adult total (</span><span class="si">% o</span><span class="s1">f people ages 15 and above)&#39;</span><span class="p">,</span> 
+                       <span class="s1">&#39;ICT goods imports (% total goods imports)&#39;</span><span class="p">]</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">selected_indicators</span><span class="p">)]</span>
 
 <span class="c1"># Print the head</span>
@@ -905,7 +906,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
     </tr>
   </tbody>
 </table>
-<p>8211 rows × 31 columns</p>
+<p>8211 rows × 32 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1225,7 +1226,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
     </tr>
   </tbody>
 </table>
-<p>8211 rows × 32 columns</p>
+<p>8211 rows × 33 columns</p>
 </div></div></div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -1258,12 +1259,12 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_34994/1657942527.py:2: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_40171/1657942527.py:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries.replace(&#39;nan&#39;, np.nan, inplace=True)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_34994/1657942527.py:5: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_40171/1657942527.py:5: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
