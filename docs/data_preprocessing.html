@@ -465,7 +465,6 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
                        <span class="s1">&#39;Foreign direct investment, net inflows (BoP, current US$)&#39;</span><span class="p">,</span>
                        <span class="s1">&#39;GNI per capita, PPP (current international $)&#39;</span><span class="p">,</span>
                        <span class="s1">&#39;School enrollment, secondary (% net)&#39;</span><span class="p">,</span>
-                       <span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">,</span>
                        <span class="s2">&quot;Educational attainment, at least Bachelor&#39;s or equivalent, population 25+, total (%) (cumulative)&quot;</span><span class="p">,</span>
                        <span class="s1">&#39;Educational attainment, at least completed primary, population 25+ years, total (%) (cumulative)&#39;</span><span class="p">,</span>
                        <span class="s2">&quot;Educational attainment, at least Master&#39;s or equivalent, population 25+, total (%) (cumulative)&quot;</span><span class="p">,</span>
@@ -500,6 +499,12 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
                        <span class="s1">&#39;ICT service exports (</span><span class="si">% o</span><span class="s1">f service exports, BoP)&#39;</span><span class="p">,</span>
                        <span class="s1">&#39;Researchers in R&amp;D (per million people)&#39;</span><span class="p">,</span>
                        <span class="s1">&#39;Research and development expenditure (</span><span class="si">% o</span><span class="s1">f GDP)&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;Employment to population ratio, 15+, total (%) (national estimate)&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;Market capitalization of listed domestic companies (</span><span class="si">% o</span><span class="s1">f GDP)&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;Logistics performance index: Quality of trade and transport-related infrastructure (1=low to 5=high)&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;Exports of goods and services (</span><span class="si">% o</span><span class="s1">f GDP)&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;Imports of goods and services (</span><span class="si">% o</span><span class="s1">f GDP)&#39;</span>
+
 <span class="p">]</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">selected_indicators</span><span class="p">)]</span>
@@ -735,7 +740,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
       <td>...</td>
     </tr>
     <tr>
-      <th>8207</th>
+      <th>8208</th>
       <td>2020</td>
       <td>West Bank and Gaza</td>
       <td>PSE</td>
@@ -759,7 +764,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
       <td>Middle East &amp; North Africa</td>
     </tr>
     <tr>
-      <th>8208</th>
+      <th>8209</th>
       <td>2020</td>
       <td>World</td>
       <td>WLD</td>
@@ -783,7 +788,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
       <td>NaN</td>
     </tr>
     <tr>
-      <th>8209</th>
+      <th>8210</th>
       <td>2020</td>
       <td>Yemen, Rep.</td>
       <td>YEM</td>
@@ -807,7 +812,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
       <td>Middle East &amp; North Africa</td>
     </tr>
     <tr>
-      <th>8210</th>
+      <th>8211</th>
       <td>2020</td>
       <td>Zambia</td>
       <td>ZMB</td>
@@ -831,7 +836,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
       <td>Sub-Saharan Africa</td>
     </tr>
     <tr>
-      <th>8211</th>
+      <th>8212</th>
       <td>2020</td>
       <td>Zimbabwe</td>
       <td>ZWE</td>
@@ -856,7 +861,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
     </tr>
   </tbody>
 </table>
-<p>8212 rows × 43 columns</p>
+<p>8213 rows × 48 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -1066,7 +1071,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
       <td>...</td>
     </tr>
     <tr>
-      <th>8206</th>
+      <th>8207</th>
       <td>2020</td>
       <td>Virgin Islands (U.S.)</td>
       <td>VIR</td>
@@ -1090,7 +1095,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
       <td>Latin America &amp; Caribbean</td>
     </tr>
     <tr>
-      <th>8207</th>
+      <th>8208</th>
       <td>2020</td>
       <td>West Bank and Gaza</td>
       <td>PSE</td>
@@ -1114,7 +1119,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
       <td>Middle East &amp; North Africa</td>
     </tr>
     <tr>
-      <th>8209</th>
+      <th>8210</th>
       <td>2020</td>
       <td>Yemen, Rep.</td>
       <td>YEM</td>
@@ -1138,7 +1143,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
       <td>Middle East &amp; North Africa</td>
     </tr>
     <tr>
-      <th>8210</th>
+      <th>8211</th>
       <td>2020</td>
       <td>Zambia</td>
       <td>ZMB</td>
@@ -1162,7 +1167,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
       <td>Sub-Saharan Africa</td>
     </tr>
     <tr>
-      <th>8211</th>
+      <th>8212</th>
       <td>2020</td>
       <td>Zimbabwe</td>
       <td>ZWE</td>
@@ -1187,7 +1192,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
     </tr>
   </tbody>
 </table>
-<p>6693 rows × 43 columns</p>
+<p>6694 rows × 48 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -1212,30 +1217,30 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_55025/2024854304.py:2: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_3742/2024854304.py:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries.replace(&#39;nan&#39;, np.nan, inplace=True)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_55025/2024854304.py:5: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_3742/2024854304.py:5: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries[&#39;Individuals using the Internet (% of population)&#39;] = pd.to_numeric(df_all_countries[&#39;Individuals using the Internet (% of population)&#39;], errors=&#39;coerce&#39;)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_55025/2024854304.py:6: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_3742/2024854304.py:6: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries[&#39;School enrollment, tertiary (% gross)&#39;] = pd.to_numeric(df_all_countries[&#39;School enrollment, tertiary (% gross)&#39;], errors=&#39;coerce&#39;)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_55025/2024854304.py:7: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_3742/2024854304.py:7: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries[&#39;School enrollment, secondary (% gross)&#39;] = pd.to_numeric(df_all_countries[&#39;School enrollment, secondary (% gross)&#39;], errors=&#39;coerce&#39;)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_55025/2024854304.py:8: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_3742/2024854304.py:8: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -1430,7 +1435,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>8206</th>
+      <th>8207</th>
       <td>2020</td>
       <td>Virgin Islands (U.S.)</td>
       <td>VIR</td>
@@ -1454,7 +1459,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Latin America &amp; Caribbean</td>
     </tr>
     <tr>
-      <th>8207</th>
+      <th>8208</th>
       <td>2020</td>
       <td>West Bank and Gaza</td>
       <td>PSE</td>
@@ -1478,7 +1483,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Middle East &amp; North Africa</td>
     </tr>
     <tr>
-      <th>8209</th>
+      <th>8210</th>
       <td>2020</td>
       <td>Yemen, Rep.</td>
       <td>YEM</td>
@@ -1502,7 +1507,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Middle East &amp; North Africa</td>
     </tr>
     <tr>
-      <th>8210</th>
+      <th>8211</th>
       <td>2020</td>
       <td>Zambia</td>
       <td>ZMB</td>
@@ -1526,7 +1531,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Sub-Saharan Africa</td>
     </tr>
     <tr>
-      <th>8211</th>
+      <th>8212</th>
       <td>2020</td>
       <td>Zimbabwe</td>
       <td>ZWE</td>
@@ -1551,7 +1556,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     </tr>
   </tbody>
 </table>
-<p>6693 rows × 43 columns</p>
+<p>6694 rows × 48 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -1756,7 +1761,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>8206</th>
+      <th>8207</th>
       <td>2020</td>
       <td>Virgin Islands (U.S.)</td>
       <td>VIR</td>
@@ -1780,7 +1785,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Europe &amp; North America</td>
     </tr>
     <tr>
-      <th>8207</th>
+      <th>8208</th>
       <td>2020</td>
       <td>West Bank and Gaza</td>
       <td>PSE</td>
@@ -1804,7 +1809,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Africa &amp; South America &amp; Middle East</td>
     </tr>
     <tr>
-      <th>8209</th>
+      <th>8210</th>
       <td>2020</td>
       <td>Yemen, Rep.</td>
       <td>YEM</td>
@@ -1828,7 +1833,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Africa &amp; South America &amp; Middle East</td>
     </tr>
     <tr>
-      <th>8210</th>
+      <th>8211</th>
       <td>2020</td>
       <td>Zambia</td>
       <td>ZMB</td>
@@ -1852,7 +1857,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Africa &amp; South America &amp; Middle East</td>
     </tr>
     <tr>
-      <th>8211</th>
+      <th>8212</th>
       <td>2020</td>
       <td>Zimbabwe</td>
       <td>ZWE</td>
@@ -1877,7 +1882,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     </tr>
   </tbody>
 </table>
-<p>6693 rows × 44 columns</p>
+<p>6694 rows × 49 columns</p>
 </div></div></div>
 </div>
 </section>
@@ -2078,7 +2083,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>...</td>
     </tr>
     <tr>
-      <th>8207</th>
+      <th>8208</th>
       <td>2020</td>
       <td>West Bank and Gaza</td>
       <td>PSE</td>
@@ -2102,7 +2107,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Africa &amp; South America &amp; Middle East</td>
     </tr>
     <tr>
-      <th>8208</th>
+      <th>8209</th>
       <td>2020</td>
       <td>World</td>
       <td>WLD</td>
@@ -2126,7 +2131,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>NaN</td>
     </tr>
     <tr>
-      <th>8209</th>
+      <th>8210</th>
       <td>2020</td>
       <td>Yemen, Rep.</td>
       <td>YEM</td>
@@ -2150,7 +2155,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Africa &amp; South America &amp; Middle East</td>
     </tr>
     <tr>
-      <th>8210</th>
+      <th>8211</th>
       <td>2020</td>
       <td>Zambia</td>
       <td>ZMB</td>
@@ -2174,7 +2179,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
       <td>Africa &amp; South America &amp; Middle East</td>
     </tr>
     <tr>
-      <th>8211</th>
+      <th>8212</th>
       <td>2020</td>
       <td>Zimbabwe</td>
       <td>ZWE</td>
@@ -2199,7 +2204,7 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     </tr>
   </tbody>
 </table>
-<p>8212 rows × 44 columns</p>
+<p>8213 rows × 49 columns</p>
 </div></div></div>
 </div>
 </section>
