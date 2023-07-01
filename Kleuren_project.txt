@@ -1,3 +1,16 @@
+New colors: 
+background: #1a1b26  
+plot background: #16161e
+structure: #cbd0e6 (old: #a9b1d6)
+structre 2: #7a809c
+Color: #9dcd6a (green)
+Color: #7aa2f8 (blue)
+Color: #dfaf67 (orange)
+Color: #bc99f7 (pink)
+
+
+
+
 NEW COLORS
 background: #fef5e0 (cosmic latte) #ccb990 (ecru)
 structure: #140e01 (smoky black)
