@@ -1,112 +1,78 @@
 Traceback (most recent call last):
-  File "/home/anetey/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
+  File "/usr/local/Caskroom/miniconda/base/lib/python3.10/site-packages/jupyter_cache/executors/utils.py", line 58, in single_nb_execution
     executenb(
-  File "/home/anetey/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 1305, in execute
+  File "/usr/local/Caskroom/miniconda/base/lib/python3.10/site-packages/nbclient/client.py", line 1305, in execute
     return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/anetey/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
+  File "/usr/local/Caskroom/miniconda/base/lib/python3.10/site-packages/jupyter_core/utils/__init__.py", line 166, in wrapped
     return loop.run_until_complete(inner)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/anetey/miniconda3/envs/jupyterbook/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+  File "/usr/local/Caskroom/miniconda/base/lib/python3.10/asyncio/base_events.py", line 649, in run_until_complete
     return future.result()
-           ^^^^^^^^^^^^^^^
-  File "/home/anetey/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 705, in async_execute
+  File "/usr/local/Caskroom/miniconda/base/lib/python3.10/site-packages/nbclient/client.py", line 705, in async_execute
     await self.async_execute_cell(
-  File "/home/anetey/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 1058, in async_execute_cell
+  File "/usr/local/Caskroom/miniconda/base/lib/python3.10/site-packages/nbclient/client.py", line 1058, in async_execute_cell
     await self._check_raise_for_error(cell, cell_index, exec_reply)
-  File "/home/anetey/miniconda3/envs/jupyterbook/lib/python3.11/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
+  File "/usr/local/Caskroom/miniconda/base/lib/python3.10/site-packages/nbclient/client.py", line 914, in _check_raise_for_error
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-df_animate = df_all_countries
+# ideas
+# r&d researchers/ academic staff, internet users, over the years - for regions
 
-df_animate = df_animate[df_animate['Country Code'].isin(country_codes)]
+# trade goods , trade services , internet users - for regions (over the years in animation)
+digital_divide_regions = {'Afghanistan': 'Asia & Oceania', 'Albania': 'Europe & North America', 'Algeria': 'Africa & South America & Middle East', 'American Samoa': 'Asia & Oceania', 'Andorra': 'Europe & North America', 'Angola': 'Africa & South America & Middle East', 'Antigua and Barbuda': 'Europe & North America', 'Argentina': 'Africa & South America & Middle East', 'Armenia': 'Asia & Oceania', 'Aruba': 'Europe & North America', 'Australia': 'Asia & Oceania', 'Austria': 'Europe & North America', 'Azerbaijan': 'Asia & Oceania', 'Bahamas, The': 'Europe & North America', 'Bahrain': 'Africa & South America & Middle East', 'Bangladesh': 'Asia & Oceania', 'Barbados': 'Europe & North America', 'Belarus': 'Europe & North America', 'Belgium': 'Europe & North America', 'Belize': 'Europe & North America', 'Benin': 'Africa & South America & Middle East', 'Bermuda': 'Europe & North America', 'Bhutan': 'Asia & Oceania', 'Bolivia': 'Africa & South America & Middle East', 'Bosnia and Herzegovina': 'Europe & North America', 'Botswana': 'Africa & South America & Middle East', 'Brazil': 'Africa & South America & Middle East', 'British Virgin Islands': 'Europe & North America', 'Brunei Darussalam': 'Asia & Oceania', 'Bulgaria': 'Europe & North America', 'Burkina Faso': 'Africa & South America & Middle East', 'Burundi': 'Africa & South America & Middle East', 'Cabo Verde': 'Africa & South America & Middle East', 'Cambodia': 'Asia & Oceania', 'Cameroon': 'Africa & South America & Middle East', 'Canada': 'Europe & North America', 'Cayman Islands': 'Europe & North America', 'Central African Republic': 'Africa & South America & Middle East', 'Chad': 'Africa & South America & Middle East', 'Channel Islands': 'Europe & North America', 'Chile': 'Africa & South America & Middle East', 'China': 'Asia & Oceania', 'Colombia': 'Africa & South America & Middle East', 'Comoros': 'Africa & South America & Middle East', 'Congo, Dem. Rep.': 'Africa & South America & Middle East', 'Congo, Rep.': 'Africa & South America & Middle East', 'Costa Rica': 'Europe & North America', "Cote d'Ivoire": 'Africa & South America & Middle East', 'Croatia': 'Europe & North America', 'Cuba': 'Europe & North America', 'Curacao': 'Europe & North America', 'Cyprus': 'Asia & Oceania', 'Czech Republic': 'Europe & North America', 'Denmark': 'Europe & North America', 'Djibouti': 'Africa & South America & Middle East', 'Dominica': 'Europe & North America', 'Dominican Republic': 'Europe & North America', 'Ecuador': 'Africa & South America & Middle East', 'Egypt, Arab Rep.': 'Africa & South America & Middle East', 'El Salvador': 'Europe & North America', 'Equatorial Guinea': 'Africa & South America & Middle East', 'Eritrea': 'Africa & South America & Middle East', 'Estonia': 'Europe & North America', 'Eswatini': 'Africa & South America & Middle East', 'Ethiopia': 'Africa & South America & Middle East', 'Faroe Islands': 'Europe & North America', 'Fiji': 'Asia & Oceania', 'Finland': 'Europe & North America', 'France': 'Europe & North America', 'French Polynesia': 'Asia & Oceania', 'Gabon': 'Africa & South America & Middle East', 'Gambia, The': 'Africa & South America & Middle East', 'Georgia': 'Asia & Oceania', 'Germany': 'Europe & North America', 'Ghana': 'Africa & South America & Middle East', 'Gibraltar': 'Europe & North America', 'Greece': 'Europe & North America', 'Greenland': 'Europe & North America', 'Grenada': 'Europe & North America', 'Guam': 'Asia & Oceania', 'Guatemala': 'Europe & North America', 'Guinea': 'Africa & South America & Middle East', 'Guinea-Bissau': 'Africa & South America & Middle East', 'Guyana': 'Africa & South America & Middle East', 'Haiti': 'Europe & North America', 'Honduras': 'Europe & North America', 'Hong Kong SAR, China': 'Asia & Oceania', 'Hungary': 'Europe & North America', 'Iceland': 'Europe & North America', 'India': 'Asia & Oceania', 'Indonesia': 'Asia & Oceania', 'Iran, Islamic Rep.': 'Africa & South America & Middle East', 'Iraq': 'Africa & South America & Middle East', 'Ireland': 'Europe & North America', 'Isle of Man': 'Europe & North America', 'Israel': 'Africa & South America & Middle East', 'Italy': 'Europe & North America', 'Jamaica': 'Europe & North America', 'Japan': 'Asia & Oceania', 'Jordan': 'Africa & South America & Middle East', 'Kazakhstan': 'Asia & Oceania', 'Kenya': 'Africa & South America & Middle East', 'Kiribati': 'Asia & Oceania', "Korea, Dem. People's Rep.": 'Asia & Oceania', 'Korea, Rep.': 'Asia & Oceania', 'Kosovo': 'Europe & North America', 'Kuwait': 'Africa & South America & Middle East', 'Kyrgyz Republic': 'Asia & Oceania', 'Lao PDR': 'Asia & Oceania', 'Latvia': 'Europe & North America', 'Lebanon': 'Africa & South America & Middle East', 'Lesotho': 'Africa & South America & Middle East', 'Liberia': 'Africa & South America & Middle East', 'Libya': 'Africa & South America & Middle East', 'Liechtenstein': 'Europe & North America', 'Lithuania': 'Europe & North America', 'Luxembourg': 'Europe & North America', 'Macao SAR, China': 'Asia & Oceania', 'Madagascar': 'Africa & South America & Middle East', 'Malawi': 'Africa & South America & Middle East', 'Malaysia': 'Asia & Oceania', 'Maldives': 'Asia & Oceania', 'Mali': 'Africa & South America & Middle East', 'Malta': 'Europe & North America', 'Marshall Islands': 'Asia & Oceania', 'Mauritania': 'Africa & South America & Middle East', 'Mauritius': 'Africa & South America & Middle East', 'Mexico': 'Europe & North America', 'Micronesia, Fed. Sts.': 'Asia & Oceania', 'Moldova': 'Europe & North America', 'Monaco': 'Europe & North America', 'Mongolia': 'Asia & Oceania', 'Montenegro': 'Europe & North America', 'Morocco': 'Africa & South America & Middle East', 'Mozambique': 'Africa & South America & Middle East', 'Myanmar': 'Asia & Oceania', 'Namibia': 'Africa & South America & Middle East', 'Nauru': 'Asia & Oceania', 'Nepal': 'Asia & Oceania', 'Netherlands': 'Europe & North America', 'New Caledonia': 'Asia & Oceania', 'New Zealand': 'Asia & Oceania', 'Nicaragua': 'Europe & North America', 'Niger': 'Africa & South America & Middle East', 'Nigeria': 'Africa & South America & Middle East', 'North Macedonia': 'Europe & North America', 'Northern Mariana Islands': 'Asia & Oceania', 'Norway': 'Europe & North America', 'Oman': 'Africa & South America & Middle East', 'Pakistan': 'Asia & Oceania', 'Palau': 'Asia & Oceania', 'Panama': 'Europe & North America', 'Papua New Guinea': 'Asia & Oceania', 'Paraguay': 'Africa & South America & Middle East', 'Peru': 'Africa & South America & Middle East', 'Philippines': 'Asia & Oceania', 'Poland': 'Europe & North America', 'Portugal': 'Europe & North America', 'Puerto Rico': 'Europe & North America', 'Qatar': 'Africa & South America & Middle East', 'Romania': 'Europe & North America', 'Russian Federation': 'Europe & North America', 'Rwanda': 'Africa & South America & Middle East', 'Samoa': 'Asia & Oceania', 'San Marino': 'Europe & North America', 'Sao Tome and Principe': 'Africa & South America & Middle East', 'Saudi Arabia': 'Africa & South America & Middle East', 'Senegal': 'Africa & South America & Middle East', 'Serbia': 'Europe & North America', 'Seychelles': 'Africa & South America & Middle East', 'Sierra Leone': 'Africa & South America & Middle East', 'Singapore': 'Asia & Oceania', 'Sint Maarten (Dutch part)': 'Europe & North America', 'Slovak Republic': 'Europe & North America', 'Slovenia': 'Europe & North America', 'Solomon Islands': 'Asia & Oceania', 'Somalia': 'Africa & South America & Middle East', 'South Africa': 'Africa & South America & Middle East', 'South Sudan': 'Africa & South America & Middle East', 'Spain': 'Europe & North America', 'Sri Lanka': 'Asia & Oceania', 'St. Kitts and Nevis': 'Europe & North America', 'St. Lucia': 'Europe & North America', 'St. Martin (French part)': 'Europe & North America', 'St. Vincent and the Grenadines': 'Europe & North America', 'Sudan': 'Africa & South America & Middle East', 'Suriname': 'Africa & South America & Middle East', 'Sweden': 'Europe & North America', 'Switzerland': 'Europe & North America', 'Syrian Arab Republic': 'Africa & South America & Middle East', 'Tajikistan': 'Asia & Oceania', 'Tanzania': 'Africa & South America & Middle East', 'Thailand': 'Asia & Oceania', 'Timor-Leste': 'Asia & Oceania', 'Togo': 'Africa & South America & Middle East', 'Tonga': 'Asia & Oceania', 'Trinidad and Tobago': 'Europe & North America', 'Tunisia': 'Africa & South America & Middle East', 'Turkiye': 'Asia & Oceania', 'Turkmenistan': 'Asia & Oceania', 'Turks and Caicos Islands': 'Europe & North America', 'Tuvalu': 'Asia & Oceania', 'Uganda': 'Africa & South America & Middle East', 'Ukraine': 'Europe & North America', 'United Arab Emirates': 'Africa & South America & Middle East', 'United Kingdom': 'Europe & North America', 'United States': 'Europe & North America', 'Uruguay': 'Africa & South America & Middle East', 'Uzbekistan': 'Asia & Oceania', 'Vanuatu': 'Asia & Oceania', 'Vietnam': 'Asia & Oceania', 'Virgin Islands (U.S.)': 'Europe & North America', 'West Bank and Gaza': 'Asia & Oceania', 'Yemen, Rep.': 'Africa & South America & Middle East', 'Zambia': 'Africa & South America & Middle East', 'Zimbabwe': 'Africa & South America & Middle East'}
+region_colors = {
+    'Europe & North America': '#AA1D0E',
+    'Asia & Oceania': '#0A64AE',
+    'Africa & South America & Middle East': '#ccb990'
+}
 
-df_animate = df_animate[['Year',
-                         'Country Name',
-                         'Region',
-                         'Individuals using the Internet (% of population)',
-                         'GNI per capita, PPP (current international $)']]
+# Create a list of colors for each country based on its region
+colors = []
+for country in df_all_countries_clean_year['Country Name']:
+    if country in digital_divide_regions and digital_divide_regions[country] in ['Europe & North America', 'Asia & Oceania', 'Africa & South America & Middle East']:
+        colors.append(region_colors[digital_divide_regions[country]])
+    else:
+        # Exclude countries that are not from Europe & North America, Asia & Oceania or Africa & South America & Middle East
+        df_all_countries_clean_year.drop(df_all_countries_clean_year[df_all_countries_clean_year['Country Name'] == country].index, inplace=True)
 
-start_year = 1990
-end_year = 2020
-df_animate = df_animate[(df_animate['Year'] >= start_year) & (df_animate['Year'] <= end_year)]
+# df_all_countries_clean_year['ICT goods exports (% of total goods exports)']
 
-df_animate = df_animate.dropna(axis=0)
-
-region_colors = ['rgba(67,111,154,255)',
-                 'rgba(223,162,163,255)',
-                 'rgba(215,51,52,255)',
-                 'rgba(170,186,200,255)',
-                 'rgba(0,0,0,255)',
-                 'rgba(66,111,66,255)',
-                 'rgba(245,249,250,255)' 
-                 ] 
-
-fig = px.scatter(df_animate, x='Individuals using the Internet (% of population)', 
-                 y='GNI per capita, PPP (current international $)',
-                 animation_frame="Year",
-                 animation_group="Country Name",
-                 color="Region",
-                 color_discrete_sequence=region_colors, 
-                 title="Internet Access vs GNI per Country",
-                 hover_name="Country Name",
-                 range_y=[df_animate['GNI per capita, PPP (current international $)'].min(),df_animate['GNI per capita, PPP (current international $)'].max()]) 
-
-fig.update_xaxes(range=[0, 100])
-fig.update_yaxes(title='GNI per capita, PPP $')
-fig.update_traces(
-    marker=dict(
-        size=10, 
-        opacity=1,
-        line=dict(width=1, color='black')))
-
-sliders=dict(
-    currentvalue=dict(
-        {"prefix": "Currently Showing Year: "},
-        font=dict(size=12))
-),
-
-
-fig.update_layout(
-    autosize=True,
-    sliders=sliders,
-    plot_bgcolor='rgba(242, 242, 242, 255)',
-    updatemenus=[
-        dict(
-            type="buttons",
-            showactive=False,
-            buttons=[
-                dict(
-                    label="Play",
-                    method="animate",
-                    args=[None, {"frame": {"duration": 500, "redraw": True}}],
-                ),
-                dict(
-                    label="Pause",
-                    method="animate",
-                    args=[[None], {"frame": {"duration": 0, "redraw": False}, "mode": "immediate"}],
-                ),
-            ],
-        )
-    ]
+fig1 = px.scatter_3d(
+    df_all_countries_clean_year, 
+    x='ICT goods exports (% of total goods exports)', 
+    y='ICT service exports (% of service exports, BoP)', 
+    z='Individuals using the Internet (% of population)',
+    color=colors, 
+    size='Individuals using the Internet (% of population)', 
+    size_max=18,
+    # symbol=colors, 
+    opacity=0.7,
 )
-fig.show()
 
+fig1.update_layout(
+    title='AA',
+    font = dict(family = 'Georgia', size = 12.5),
+    title_font_color = '#140e01',
+    font_color = '#140e01',
+
+    paper_bgcolor = '#fef5e0',
+    plot_bgcolor='#fef5e0',
+
+    margin=dict(l=0, r=0, b=0, t=0)
+)
+
+fig1.show()
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-Cell [0;32mIn[4], line 3[0m
-[1;32m      1[0m df_animate [38;5;241m=[39m df_all_countries
-[0;32m----> 3[0m df_animate [38;5;241m=[39m df_animate[df_animate[[38;5;124m'[39m[38;5;124mCountry Code[39m[38;5;124m'[39m][38;5;241m.[39misin([43mcountry_codes[49m)]
-[1;32m      5[0m df_animate [38;5;241m=[39m df_animate[[[38;5;124m'[39m[38;5;124mYear[39m[38;5;124m'[39m,
-[1;32m      6[0m                          [38;5;124m'[39m[38;5;124mCountry Name[39m[38;5;124m'[39m,
-[1;32m      7[0m                          [38;5;124m'[39m[38;5;124mRegion[39m[38;5;124m'[39m,
-[1;32m      8[0m                          [38;5;124m'[39m[38;5;124mIndividuals using the Internet ([39m[38;5;132;01m% o[39;00m[38;5;124mf population)[39m[38;5;124m'[39m,
-[1;32m      9[0m                          [38;5;124m'[39m[38;5;124mGNI per capita, PPP (current international $)[39m[38;5;124m'[39m]]
-[1;32m     11[0m start_year [38;5;241m=[39m [38;5;241m1990[39m
+Cell [0;32mIn[7], line 14[0m
+[1;32m     12[0m [38;5;66;03m# Create a list of colors for each country based on its region[39;00m
+[1;32m     13[0m colors [38;5;241m=[39m []
+[0;32m---> 14[0m [38;5;28;01mfor[39;00m country [38;5;129;01min[39;00m [43mdf_all_countries_clean_year[49m[[38;5;124m'[39m[38;5;124mCountry Name[39m[38;5;124m'[39m]:
+[1;32m     15[0m     [38;5;28;01mif[39;00m country [38;5;129;01min[39;00m digital_divide_regions [38;5;129;01mand[39;00m digital_divide_regions[country] [38;5;129;01min[39;00m [[38;5;124m'[39m[38;5;124mEurope & North America[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mAsia & Oceania[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mAfrica & South America & Middle East[39m[38;5;124m'[39m]:
+[1;32m     16[0m         colors[38;5;241m.[39mappend(region_colors[digital_divide_regions[country]])
 
-[0;31mNameError[0m: name 'country_codes' is not defined
+[0;31mNameError[0m: name 'df_all_countries_clean_year' is not defined
 
