@@ -482,7 +482,9 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
                        <span class="s1">&#39;Goods exports (BoP, current US$)&#39;</span><span class="p">,</span>
                        <span class="s1">&#39;Service exports (BoP, current US$)&#39;</span><span class="p">,</span>
                        <span class="s1">&#39;ICT service exports (BoP, current US$)&#39;</span><span class="p">,</span>
-                       <span class="s1">&#39;ICT service exports (</span><span class="si">% o</span><span class="s1">f service exports, BoP)&#39;</span>
+                       <span class="s1">&#39;ICT service exports (</span><span class="si">% o</span><span class="s1">f service exports, BoP)&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;Researchers in R&amp;D (per million people)&#39;</span><span class="p">,</span>
+                       <span class="s1">&#39;Research and development expenditure (</span><span class="si">% o</span><span class="s1">f GDP)&#39;</span><span class="p">,</span>
 <span class="p">]</span>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Indicator Name&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">selected_indicators</span><span class="p">)]</span>
@@ -920,7 +922,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
     </tr>
   </tbody>
 </table>
-<p>8212 rows × 40 columns</p>
+<p>8212 rows × 42 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1240,7 +1242,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
     </tr>
   </tbody>
 </table>
-<p>8212 rows × 41 columns</p>
+<p>8212 rows × 43 columns</p>
 </div></div></div>
 </div>
 <div class="cell tag_hide-input docutils container">
@@ -1568,7 +1570,7 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
     </tr>
   </tbody>
 </table>
-<p>6693 rows × 41 columns</p>
+<p>6693 rows × 43 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -1578,25 +1580,47 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
 
 <span class="c1"># Convert columns to numeric data type</span>
 <span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Individuals using the Internet (</span><span class="si">% o</span><span class="s1">f population)&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, tertiary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, tertiary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, secondary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, secondary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
+<span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Researchers in R&amp;D (per million people)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;Researchers in R&amp;D (per million people)&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
 
 <span class="c1"># Replace missing values with linearly interpolated values</span>
 <span class="n">df_all_countries</span> <span class="o">=</span> <span class="n">df_all_countries</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+
 <span class="n">df_all_countries</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_52150/976440543.py:2: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_54051/2024854304.py:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries.replace(&#39;nan&#39;, np.nan, inplace=True)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_52150/976440543.py:5: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_54051/2024854304.py:5: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries[&#39;Individuals using the Internet (% of population)&#39;] = pd.to_numeric(df_all_countries[&#39;Individuals using the Internet (% of population)&#39;], errors=&#39;coerce&#39;)
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_54051/2024854304.py:6: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_all_countries[&#39;School enrollment, tertiary (% gross)&#39;] = pd.to_numeric(df_all_countries[&#39;School enrollment, tertiary (% gross)&#39;], errors=&#39;coerce&#39;)
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_54051/2024854304.py:7: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_all_countries[&#39;School enrollment, secondary (% gross)&#39;] = pd.to_numeric(df_all_countries[&#39;School enrollment, secondary (% gross)&#39;], errors=&#39;coerce&#39;)
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_54051/2024854304.py:8: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  df_all_countries[&#39;Researchers in R&amp;D (per million people)&#39;] = pd.to_numeric(df_all_countries[&#39;Researchers in R&amp;D (per million people)&#39;], errors=&#39;coerce&#39;)
 </pre></div>
 </div>
 <div class="output text_html"><div>
@@ -1907,23 +1931,8 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
     </tr>
   </tbody>
 </table>
-<p>6693 rows × 41 columns</p>
+<p>6693 rows × 43 columns</p>
 </div></div></div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Replace &#39;nan&#39; with np.nan</span>
-<span class="n">df_all_countries</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;nan&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-<span class="c1"># Convert columns to numeric data type</span>
-<span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, tertiary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, tertiary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
-<span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, secondary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">df_all_countries</span><span class="p">[</span><span class="s1">&#39;School enrollment, secondary (</span><span class="si">% g</span><span class="s1">ross)&#39;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s1">&#39;coerce&#39;</span><span class="p">)</span>
-
-<span class="c1"># Replace missing values with linearly interpolated values</span>
-<span class="n">df_all_countries_clean</span> <span class="o">=</span> <span class="n">df_all_countries</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1959,13 +1968,13 @@ North America
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Asia
-North America
-Europe
-South America
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Europe
 Oceania
 Africa
 Middle East
+Asia
+South America
+North America
 </pre></div>
 </div>
 </div>
@@ -2320,7 +2329,7 @@ Europe &amp; North America
     </tr>
   </tbody>
 </table>
-<p>6693 rows × 42 columns</p>
+<p>6693 rows × 44 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -2639,7 +2648,7 @@ Europe &amp; North America
     </tr>
   </tbody>
 </table>
-<p>6693 rows × 42 columns</p>
+<p>6693 rows × 44 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -2958,7 +2967,7 @@ Europe &amp; North America
     </tr>
   </tbody>
 </table>
-<p>8212 rows × 42 columns</p>
+<p>8212 rows × 44 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -2967,6 +2976,18 @@ Europe &amp; North America
 <span class="n">df_wide</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_wide.pkl&quot;</span><span class="p">)</span>
 <span class="n">df_all_countries</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_all_countries.pkl&quot;</span><span class="p">)</span>
 <span class="n">df_all_countries_clean</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_all_countries_clean.pkl&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">14</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">df_wide</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_wide.pkl&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">df_all_countries</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_all_countries.pkl&quot;</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">df_all_countries_clean</span><span class="o">.</span><span class="n">to_pickle</span><span class="p">(</span><span class="s2">&quot;df_all_countries_clean.pkl&quot;</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;df_all_countries_clean&#39; is not defined
 </pre></div>
 </div>
 </div>
