@@ -401,12 +401,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="data-preprocessing">
 <h1>Data Preprocessing<a class="headerlink" href="#data-preprocessing" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import packages</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
@@ -419,7 +414,6 @@ document.write(`
 </pre></div>
 </div>
 </div>
-</details>
 </div>
 <p>Github: <a class="github reference external" href="https://github.com/anetey-abbey/infoviz.git">anetey-abbey/infoviz.git</a> <br>
 Notebook: <a class="reference external" href="https://anetey-abbey.github.io/infoviz/docs/notebook.html">https://anetey-abbey.github.io/infoviz/docs/notebook.html</a></p>
@@ -427,29 +421,18 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
 <h2>Load data<a class="headerlink" href="#load-data" title="Permalink to this heading">#</a></h2>
 <section id="import-dataset">
 <h3>Import dataset<a class="headerlink" href="#import-dataset" title="Permalink to this heading">#</a></h3>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># this dataset contains the meta data of the WDI dataset</span>
 <span class="n">df_countrydata</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;WDICountry.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> 
 </pre></div>
 </div>
 </div>
-</details>
 </div>
 </section>
 <section id="import-the-wdi-dataset-and-select-relevant-indicators">
 <h3>Import the WDI dataset and select relevant indicators<a class="headerlink" href="#import-the-wdi-dataset-and-select-relevant-indicators" title="Permalink to this heading">#</a></h3>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;WDIData.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">)</span> 
 <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 66&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -514,17 +497,11 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
 </pre></div>
 </div>
 </div>
-</details>
 </div>
 </section>
 <section id="change-format">
 <h3>Change format<a class="headerlink" href="#change-format" title="Permalink to this heading">#</a></h3>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df_long</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">melt</span><span class="p">(</span><span class="n">id_vars</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Country Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Country Code&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Indicator Code&#39;</span><span class="p">],</span> 
                   <span class="n">var_name</span><span class="o">=</span><span class="s1">&#39;Year&#39;</span><span class="p">,</span> <span class="n">value_name</span><span class="o">=</span><span class="s1">&#39;Value&#39;</span><span class="p">)</span>
@@ -539,7 +516,6 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
 </pre></div>
 </div>
 </div>
-</details>
 </div>
 </section>
 <section id="merge-continent-data-into-wdi">
@@ -1217,30 +1193,30 @@ Notebook: <a class="reference external" href="https://anetey-abbey.github.io/inf
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_3742/2024854304.py:2: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_4265/2024854304.py:2: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries.replace(&#39;nan&#39;, np.nan, inplace=True)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_3742/2024854304.py:5: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_4265/2024854304.py:5: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries[&#39;Individuals using the Internet (% of population)&#39;] = pd.to_numeric(df_all_countries[&#39;Individuals using the Internet (% of population)&#39;], errors=&#39;coerce&#39;)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_3742/2024854304.py:6: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_4265/2024854304.py:6: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries[&#39;School enrollment, tertiary (% gross)&#39;] = pd.to_numeric(df_all_countries[&#39;School enrollment, tertiary (% gross)&#39;], errors=&#39;coerce&#39;)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_3742/2024854304.py:7: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_4265/2024854304.py:7: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   df_all_countries[&#39;School enrollment, secondary (% gross)&#39;] = pd.to_numeric(df_all_countries[&#39;School enrollment, secondary (% gross)&#39;], errors=&#39;coerce&#39;)
-/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_3742/2024854304.py:8: SettingWithCopyWarning: 
+/var/folders/v9/_3m9v4153zx32g3v3h3vvfp00000gn/T/ipykernel_4265/2024854304.py:8: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
