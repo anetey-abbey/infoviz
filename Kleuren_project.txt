@@ -11,34 +11,25 @@ Color: #bc99f7 (pink)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 NEW COLORS
 background: #fef5e0 (cosmic latte) #ccb990 (ecru)
 structure: #140e01 (smoky black)
 emphasis: #0A64AE (green blue)
 contrary: #AA1D0E (rufous red)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 MISC/ OLD
 
@@ -53,8 +44,6 @@ contrary   main: #95190c (penn red)
 
 lighter #053259
 even lighter #0A64AE
-
-
 
 Kleuren project: 
 - Rood: rgba(215,51,52,255)
