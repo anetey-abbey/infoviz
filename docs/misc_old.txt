@@ -1,0 +1,150 @@
+# Create a dropdown button for year selection
+years = df_all_countries['Year'].unique().tolist()
+
+dropdown_buttons = [
+    {
+        'label': str(year),
+        'method': 'update',
+        'args': [
+            {'visible': [year == y for y in years]},
+            {'title': 'Internet Usage by Region ({})'.format(year)}
+        ]
+    }
+    for year in years
+]
+
+# Set the background color
+background_color = '#16161e'
+
+# Define a color for each region
+region_colors = {
+    'Europe & North America': '#7aa2f8',
+    'Asia & Oceania': '#9dcd6a',
+    'Africa & South America & Middle East': '#dfaf67'
+}
+
+# Create the scatter plot
+fig = go.Figure()
+
+for year in years:
+    df_filtered = df_all_countries[df_all_countries['Year'] == year]
+
+    if df_filtered.empty:
+        continue
+
+    df_filtered = df_filtered.sort_values(by='Individuals using the Internet (% of population)', ascending=True)
+    
+    # Add bar trace for each year
+    fig.add_trace(go.Bar(
+        x=df_filtered['Country Name'],
+        y=df_filtered['Individuals using the Internet (% of population)'],
+        name='Internet Usage ({})'.format(year),
+        hovertemplate='<b>%{x}</b><br>' +
+                    'Internet Usage: %{y:.2f}%<extra></extra>',
+        visible=False,
+        marker=dict(
+            color=[region_colors[region] for region in df_filtered['Digital Divide Region']]
+        )
+    ))
+
+# Add legend items for Europe & North America, Asia & Oceania and Africa & South America & Middle East
+fig.add_trace(go.Scatter(
+    x=[None],
+    y=[None],
+    mode='markers',
+    marker=dict(color=region_colors['Europe & North America']),
+    name='Europe & North America',
+    showlegend=True,
+))
+fig.add_trace(go.Scatter(
+    x=[None],
+    y=[None],
+    mode='markers',
+    marker=dict(color=region_colors['Asia & Oceania']),
+    name='Asia & Oceania',
+    showlegend=True,
+))
+fig.add_trace(go.Scatter(
+    x=[None],
+    y=[None],
+    mode='markers',
+    marker=dict(color=region_colors['Africa & South America & Middle East']),
+    name='Africa & South America & Middle East',
+    showlegend=True,
+))
+
+# Set the initial visibility of traces for the year 2010
+for trace in fig.data:
+    if trace.name == 'Internet Usage (2010)':
+        trace.visible = True
+        trace.showlegend = False
+        break
+
+# Update layout properties
+fig.update_layout(
+    title='Internet Usage by Region (2010)',
+    font=dict(family='Georgia', size=12.5),
+    title_font_color='#cbd0e6',
+    font_color='#cbd0e6',
+
+    legend=dict(
+        orientation='h',
+        yanchor='bottom',
+        y=1.02,
+        xanchor='right',
+        x=1,
+        title=dict(
+            text=None,
+            font=dict(
+                size=14,
+            ),
+        ),
+        itemsizing='constant',
+        bgcolor=background_color,
+        bordercolor=background_color,
+        borderwidth=1,
+        traceorder='reversed',
+        itemclick=False,
+    ),
+
+    xaxis_title='Country',
+    yaxis_title='Individuals using the Internet <br> (% of population)',
+
+    updatemenus=[
+        {
+            'buttons': dropdown_buttons,
+            'direction': 'down',
+            'showactive': True,
+            'active': years.index(2010),
+            'x': 1.1,
+            'y': 0.55,
+        }
+    ],
+
+    paper_bgcolor='#16161e',
+    plot_bgcolor=background_color
+)
+
+fig.update_xaxes(showgrid=False)
+fig.update_yaxes(showgrid=True,
+                 gridwidth=1.4,
+                 gridcolor='#7a809c',
+                 zerolinewidth=1.4,
+                 zerolinecolor='#7a809c'
+)
+
+fig.update_xaxes(
+    tickmode='array',
+    tickvals=[]
+)
+
+# Show the bar chart
+fig.show()
+
+
+
+
+
+<figure>
+<figcaption align = "left"> Figure 2: Bar chart that compares two continents and the internet usage. Africa is in blue and Europe in red. The graph shows a clear divide, almost central, that is indicative of the digital divide. Source: WDI dataset. </figcaption>
+</figure>
